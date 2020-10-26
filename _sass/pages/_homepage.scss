@@ -43,7 +43,8 @@
   }
 
   .logo path:first-child,
-  .cc-icon path:last-child {
+  .cc-icon path:last-child,
+  .gh-icon path {
     fill: $white;
   }
 
@@ -90,7 +91,6 @@
   }
 
   &__blog {
-    padding: 0 $spacing-04;
 
     h3 {
       margin-bottom: 0;
@@ -105,7 +105,6 @@
 
     a {
       display: block;
-      margin: 0 $spacing-03;
       padding: $spacing-03 0;
     }
 

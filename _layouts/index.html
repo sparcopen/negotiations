@@ -4,7 +4,9 @@
   <body class="homepage">
 
     <header class="homepage__header">
-      {% include svg/logo.svg %}
+      <a href="https://www.sparcopen.org" target="_blank" rel="noopener" title="SPARC’s website" style="display: block;">
+        {% include svg/logo.svg %}
+      </a>
       <h1>&mdash; Negotiations</h1>
     </header>
 
@@ -137,12 +139,19 @@
       </section>
     </main>
 
-    <footer>
-      {% include svg/cc.svg %}
-      {% include svg/by.svg %}
-      {% include svg/github.svg %}
-
-      {% include svg/logo.svg %}
+    <footer class="row">
+      <div class="col col--1of2">
+        <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener" style="display: inline-block;">
+          {% include svg/cc.svg %}
+          {% include svg/by.svg %}
+        </a>
+        {% include svg/github.svg %}
+      </div>
+      <div class="col col--1of2" style="text-align: right;">
+        <a href="https://www.sparcopen.org" target="_blank" rel="noopener" title="SPARC’s website" style="display: block;">
+          {% include svg/logo.svg %}
+        </a>
+      </div>
     </footer>
     {% include analytics.html %}
   </body>
