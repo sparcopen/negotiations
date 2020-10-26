@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: sssoz/doaj-kit
+  repo: sssoz/negotiations
   branch: master
 media_folder: 'media/uploads'
 collections:
