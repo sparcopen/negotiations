@@ -10,7 +10,7 @@ collections:
     create: true
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Publishing Date", name: "date",  widget: "hidden", widget: "datetime"}
+      - {label: "Publishing Date", name: "date", widget: "datetime"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Topic(s)", name: "topics", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
