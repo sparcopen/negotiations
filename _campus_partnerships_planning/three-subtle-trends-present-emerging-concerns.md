@@ -1,7 +1,9 @@
 ---
 layout: with-sidebar
-title: Three Subtle Trends Present Emerging Concerns
 date: 2020-10-26T16:55:20.729Z
+title: Three Subtle Trends Present Emerging Concerns
+topics:
+  - ""
 ---
 Last year, SPARC released its [Landscape Analysis](https://osf.io/preprints/lissa/58yhb/download), an in-depth look at how academic and scholarly publishing are changing and the implications of those changes for the academic community. This was followed by the [Roadmap for Action](https://osf.io/preprints/lissa/a7nk8/download), which was designed to provide higher education leaders suggested actions that institutions might take in order to manage the challenges surfaced in the Landscape Analysis.
 
