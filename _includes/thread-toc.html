@@ -5,7 +5,7 @@
   - reports (using categories)
   - topics (using tags)
 {% endcomment %}
-{% if page.name contains "report-" %}
+{% if page.collection == 'reports' %}
   {% assign thread_type = "categories" %}
 {% else %}
   {% assign thread_type = "tags" %}
@@ -17,7 +17,7 @@
 {% if page.name == "latest.md" %}
   {% assign posts = site.posts %}
 {% elsif page.name == "members.md" %}
-  {% assign posts = site.members %}
+  {% assign posts = site.members | reverse %}
 {% elsif page.reversed %}
   {% assign posts = site.[thread_type].[thread] | reverse %}
 {% else %}

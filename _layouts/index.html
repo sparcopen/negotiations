@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+  <body class="homepage">
+
+    <header class="homepage__header">
+      {% include svg/logo.svg %}
+      <h1>&mdash; Negotiations</h1>
+    </header>
+
+    <main>
+      <section class="row">
+        <header class="col col--1of2 homepage__header--bg">
+          <h2>About</h2>
+        </header>
+        <div class="col col--1of2">
+          <p>{{ page.about_text }}</p>
+          <a href="" class="button">More about us</a>
+        </div>
+      </section>
+
+      <section class="row">
+        <header class="col homepage__header--line">
+          <h2 class="label">By working group</h2>
+        </header>
+
+        <article class="row homepage__group">
+          <header class="col col--group col--2of3 row">
+            <h3 class="col col--group col--1of2">Campus <br/>partnerships & <br/>planning</h3>
+            <img src="../media/wg/campus-partnerships.jpg" alt="" class="col col--group col--1of2"/>
+          </header>
+          <div class="col col--group col--1of3">
+            <h4>Ac dui amet, id aenean vel, dolor augue. Nascetur id nec velit.</h4>
+            <p>By Sian Brannon, Evelyn Bruneau, Carrie Nelson, Caitlin Carter</p>
+          </div>
+        </article>
+
+        <article class="row homepage__group">
+          <header class="col col--group col--2of3 row">
+            <h3 class="col col--group col--1of2">Data analysis</h3>
+            <img src="../media/wg/data-analysis.jpg" alt="" class="col col--group col--1of2"/>
+          </header>
+          <div class="col col--group col--1of3">
+            <h4>Ac dui amet, id aenean vel, dolor augue. Nascetur id nec velit.</h4>
+            <p>By Yuan Li, John Blosser, Anne O’Reilly, Nga Ong</p>
+          </div>
+        </article>
+
+        <article class="row homepage__group">
+          <header class="col col--group col--2of3 row">
+            <h3 class="col col--group col--1of2">Journal <br/>cancellation <br/>impact</h3>
+            <img src="../media/wg/journal-cancellation.jpg" alt="" class="col col--group col--1of2"/>
+          </header>
+          <div class="col col--group col--1of3">
+            <h4>Ac dui amet, id aenean vel, dolor augue. Nascetur id nec velit.</h4>
+            <p>By Greg Tananbaum</p>
+          </div>
+        </article>
+
+        <article class="row homepage__group">
+          <header class="col col--group col--2of3 row">
+            <h3 class="col col--group col--1of2">Reinvestments</h3>
+            <img src="../media/wg/reinvestments.jpg" alt="" class="col col--group col--1of2"/>
+          </header>
+          <div class="col col--group col--1of3">
+            <h4>Ac dui amet, id aenean vel, dolor augue. Nascetur id nec velit.</h4>
+            <p>By Allison Langham-Putrow, Katharine Macy, Jen Ticknor, Robert Heaton, James Stemper, Jian Wang, Nick Shockey, Michele Gibney, Yuan Li</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="row row--centered">
+        <header class="col homepage__header--line">
+          <h2 class="label">By topic</h2>
+        </header>
+        <ul class="tags">
+          <li class="tag">
+            <a href="">Terms & conditions</a>
+          </li>
+
+          <li class="tag">
+            <a href="">Market consolidation</a>
+          </li>
+
+          <li class="tag">
+            <a href="">Responsible analytics</a>
+          </li>
+
+          <li class="tag">
+            <a href="">Data management</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="row">
+        <header class="col col--1of2 homepage__header--bg">
+          <h2>Recent analysis</h2>
+          <p>{{ page.blog_text }}</p>
+          <a href="" class="button">See the blog</a>
+        </header>
+        <ol class="col col--1of2 homepage__blog">
+          <li>
+            <a href="">
+              <article>
+                <time datetime="2020-10-12">Oct 12, 2020</time>
+                <h3>Ac dui amet, id aenean vel, dolor augue. Nascetur id nec velit.</h3>
+              </article>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <article>
+                <time datetime="2020-10-12">Oct 12, 2020</time>
+                <h3>Adipiscing ultricies erat turpis adipiscing mi augue id. Amet.</h3>
+              </article>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <article>
+                <time datetime="2020-10-12">Oct 12, 2020</time>
+                <h3>Turpis viverra amet consequat faucibus suspendisse amet.</h3>
+              </article>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <article>
+                <time datetime="2020-10-12">Oct 12, 2020</time>
+                <h3>Malesuada nisl id aliquet euismod lobortis sagittis, tellus. </h3>
+              </article>
+            </a>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      {% include svg/cc.svg %}
+      {% include svg/by.svg %}
+      {% include svg/github.svg %}
+
+      {% include svg/logo.svg %}
+    </footer>
+    {% include analytics.html %}
+  </body>
+</html>
