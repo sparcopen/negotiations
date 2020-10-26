@@ -53,6 +53,7 @@
   }
 
   &__header--bg {
+    margin-left: -2.5vw;
     padding: $spacing-04;
     background: $red url('../../media/pattern-red.png') repeat;
     color: $white;
@@ -81,12 +82,17 @@
     min-height: 20vh;
 
     header {
+      margin-right: -2.5vw;
       background: $white;
       color: $black;
     }
 
     h3 {
       padding: $spacing-04;
+    }
+
+    h4 {
+      @include font-serif;
     }
   }
 
