@@ -28,6 +28,14 @@ plugins:
   - jekyll-sitemap
 
 collections:
+  campus_partnerships_planning:
+    output: true
+  data_analysis:
+    output: true
+  journal_cancellation_impact:
+    output: true
+  reinvestments:
+    output: true
   members:
     output: true
   topics:
