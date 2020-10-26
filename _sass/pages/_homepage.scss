@@ -1,195 +1,120 @@
 .homepage {
+  padding: 2.5vw;
+  background-color: $black;
+  color: $white;
+  @include font-sans;
 
-  main > section,
-  main > aside,
-  main > nav {
-    margin-bottom: $spacing-04;
+  h2, h3, h4 {
+    margin-top: 0;
   }
 
-  section > nav:not(:first-of-type) {
-    margin-top: $spacing-04;
+  a {
+    color: $white;
+    text-decoration: none;
   }
 
   ul, ol {
     @include unstyled-list;
   }
 
-  a {
-    text-decoration: none;
+  section {
+    margin-bottom: $spacing-05;
   }
 
-  blockquote {
-    font-weight: 400;
-    @include typescale-05;
+  .button {
+    margin-bottom: 0;
+    border-color: $white;
 
-    @media (min-width: 1200px) {
-      @include typescale-04;
-    }
-  }
-
-  .label {
-    margin-bottom: $spacing-03;
-    color: $red;
-  }
-
-  .portrait {
-    margin-bottom: $spacing-02;
-    float: none;
-  }
-
-  .highlight {
-    padding: $spacing-05 0;
-    background-color: rgba($light-grey, 0.35);
-
-    .label {
+    &:hover, &:active, &:focus {
+      background-color: $white;
       color: $black;
     }
   }
 
-  .card {
-    margin-bottom: $spacing-04;
-    display: flex;
-    flex-direction: column;
-    height: 50vh;
-    background-color: $grey;
-    color: $white;
-    transition: all 250ms ease;
-
-    h4, h5 {
-      margin: 0;
-    }
-
-    a {
-      color: $white;
-    }
-
-    footer {
-      padding: $spacing-04;
-    }
-
-    &:hover, &:focus, &:active {
-      background-color: $black;
-
-      .card__links {
-        display: flex;
-      }
-
-      .card__tagline {
-        display: none;
-      }
-    }
+  .tag a {
+    padding: $spacing-03;
+    background-color: $white;
+    color: $black;
   }
 
-  .card__main-link {
-    display: block;
-    flex-grow: 1;
+  .logo {
+    height: 30px;
+    width: auto;
+  }
+
+  .logo path:first-child,
+  .cc-icon path:last-child {
+    fill: $white;
+  }
+
+  &__header {
+    @include typescale-06;
+  }
+
+  &__header--bg {
     padding: $spacing-04;
+    background: $red url('../../media/pattern-red.png') repeat;
+    color: $white;
 
-    &:hover, &:focus, &:active {
-      background-color: $red;
+    h2 {
+      @include font-serif;
     }
   }
 
-  .card__tagline {
-    margin: 0;
-  }
+  &__header--line {
+    margin-bottom: $spacing-04;
+    background: linear-gradient($black 0%, $black 49%, $white 50%, $white 51%, $black 52%, $black 100%);
+    text-align: center;
 
-  .card__links {
-    display: none;
-    @include font-sans;
-
-    section {
-      width: 50%;
-    }
-
-    h5, li {
-      @include typescale-06;
-    }
-
-    ul {
-      @include unstyled-list($inline: true);
-      margin: 0;
-    }
-
-    a {
-      margin-right: $spacing-02;
-      border-bottom: 2px solid;
+    h2 {
+      padding: 0 $spacing-03;
+      display: inline-block;
+      background: $black;
     }
   }
 
-  .list {
-    @include typescale-03;
+  &__group {
+    margin-bottom: $spacing-05;
+    flex-direction: row-reverse;
+    width: 100%;
+    min-height: 20vh;
 
-    li {
-      margin-bottom: $spacing-03;
-
-      &:before {
-        display: inline-block;
-        margin-right: .5em;
-        height: .75em;
-        width: .75em;
-        content: '';
-        background-image: url("data:image/svg+xml,%3Csvg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928932C13.9526 0.538408 13.3195 0.538408 12.9289 0.928932C12.5384 1.31946 12.5384 1.95262 12.9289 2.34315L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM0 9L20 9V7L0 7L0 9Z' fill='%231F2222' fill-opacity='1'/%3E%3C/svg%3E%0A");
-        background-size: contain;
-        background-repeat: no-repeat;
-        vertical-align: middle;
-      }
-    }
-  }
-
-  .latest {
-    margin-top: $spacing-04;
-
-    @media (min-width: 768px) {
-      column-count: 2;
-      column-rule: 2px solid $grey;
-      column-gap: 80px;
+    header {
+      background: $white;
+      color: $black;
     }
 
     h3 {
-      margin: 0;
-      @include font-serif;
+      padding: $spacing-04;
+    }
+  }
+
+  &__blog {
+    padding: 0 $spacing-04;
+
+    h3 {
+      margin-bottom: 0;
+      @include typescale-04;
     }
 
     time {
-      text-align: right;
-      @include typescale-06;
-      @include font-sans;
+      display: block;
+      margin-bottom: $spacing-03;
+      font-size: smaller;
     }
 
-    li {
-      padding: 0 0 $spacing-05 0;
-      break-inside: avoid;
-    }
-  }
-
-  .logos {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-
-    li {
-      margin: 0 $spacing-04 $spacing-04 0;
-
-      &:last-child {
-        margin: 0;
-      }
-
-      @media (min-width: 1200px) {
-        margin: 0 $spacing-04 0 0;
-        flex: 1 0 10%;
-      }
+    a {
+      display: block;
+      margin: 0 $spacing-03;
+      padding: $spacing-03 0;
     }
 
-    img {
-      width: 20vw;
-      mix-blend-mode: multiply;
+    li:first-child a {
+      padding-top: 0;
     }
-  }
 
-  .about {
-    h3 {
-      margin-top: 0;
+    li:not(:last-child) a {
+      border-bottom: 1px solid $white;
     }
   }
 }

@@ -1,4 +1,4 @@
-# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings 
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
 title: "SPARC: Community Owned Infrastructure"
 sass:
@@ -21,7 +21,7 @@ author:
   twitter: sparc_na
   facebook: sparcopen
 
-BASE_PATH: https://test.infrastructure.sparcopen.org
+BASE_PATH: http://127.0.0.1:4000
 # LIVE: https://infrastructure.sparcopen.org/ NETFLY https://upbeat-swirles-009f3e.netlify.app LOCAL: http://127.0.0.1:4000
 url: https://infrastructure.sparcopen.org # for sitemap. Doesn't need to change on live / dev.
 plugins:

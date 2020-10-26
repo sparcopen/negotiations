@@ -1,9 +1,12 @@
 .tags {
-  @include unstyled-list;
+  @include unstyled-list($inline: true);
 }
 
 .tag a {
-  font-weight: 600;
+  margin: 0 $spacing-03 $spacing-03 0;
+  padding: $spacing-02 $spacing-03;
+  border-radius: 9999px;
   text-decoration: none;
   @include font-sans;
+  @include typescale-06;
 }
