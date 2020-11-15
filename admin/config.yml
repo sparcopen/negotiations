@@ -6,7 +6,37 @@ media_folder: 'media/uploads'
 collections:
   - name: 'campus-partnerships-planning'
     label: 'CPP'
-    folder: '_campus_partnerships_planning/'
+    folder: '_campus-partnerships-planning/'
+    create: true
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Publishing Date", name: "date", widget: "datetime"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Topic(s)", name: "topics", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: 'data-analysis'
+    label: 'Data Analysis'
+    folder: '_data-analysis/'
+    create: true
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Publishing Date", name: "date", widget: "datetime"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Topic(s)", name: "topics", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: 'journal-cancellation-impact'
+    label: 'JCI'
+    folder: '_journal-cancellation-impact/'
+    create: true
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Publishing Date", name: "date", widget: "datetime"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Topic(s)", name: "topics", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: 'reinvestments'
+    label: 'Reinvestments'
+    folder: '_reinvestments/'
     create: true
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
