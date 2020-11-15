@@ -32,9 +32,10 @@
   }
 
   .tag a {
-    padding: $spacing-03;
+    padding: $spacing-02;
     background-color: $white;
     color: $black;
+    line-height: 2.5;
   }
 
   .logo {
@@ -53,11 +54,14 @@
   }
 
   &__header--bg {
-    margin-left: -2.5vw;
     margin-bottom: $spacing-03;
     padding: $spacing-04;
     background: $red url('../../media/pattern-red.png') repeat;
     color: $white;
+
+    @media (min-width: 768px) {
+      margin-left: -2.5vw;
+    }
 
     h2 {
       @include font-serif;
@@ -83,9 +87,13 @@
     min-height: 20vh;
 
     header {
-      margin-right: -2.5vw;
+      margin-bottom: $spacing-03;
       background: $white;
       color: $black;
+
+      @media (min-width: 768px) {
+        margin-right: -2.5vw;
+      }
     }
 
     h3 {
