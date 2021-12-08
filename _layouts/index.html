@@ -26,49 +26,22 @@
           <h2 class="label">By working group</h2>
         </header>
 
-        <article class="row homepage__group">
-          <header class="col col--group col--2of3 row">
-            <h3 class="col col--group col--1of2">Campus <br/>partnerships & <br/>planning</h3>
-            <img src="../media/wg/campus-partnerships.jpg" alt="" class="col col--group col--1of2"/>
-          </header>
-          <div class="col col--group col--1of3">
-            <h4>Ac dui amet, id aenean vel, dolor augue. Nascetur id nec velit.</h4>
-            <p>By Sian Brannon, Evelyn Bruneau, Carrie Nelson, Caitlin Carter</p>
-          </div>
-        </article>
-
-        <article class="row homepage__group">
-          <header class="col col--group col--2of3 row">
-            <h3 class="col col--group col--1of2">Data analysis</h3>
-            <img src="../media/wg/data-analysis.jpg" alt="" class="col col--group col--1of2"/>
-          </header>
-          <div class="col col--group col--1of3">
-            <h4>Ac dui amet, id aenean vel, dolor augue. Nascetur id nec velit.</h4>
-            <p>By Yuan Li, John Blosser, Anne O’Reilly, Nga Ong</p>
-          </div>
-        </article>
-
-        <article class="row homepage__group">
-          <header class="col col--group col--2of3 row">
-            <h3 class="col col--group col--1of2">Journal <br/>cancellation <br/>impact</h3>
-            <img src="../media/wg/journal-cancellation.jpg" alt="" class="col col--group col--1of2"/>
-          </header>
-          <div class="col col--group col--1of3">
-            <h4>Ac dui amet, id aenean vel, dolor augue. Nascetur id nec velit.</h4>
-            <p>By Greg Tananbaum</p>
-          </div>
-        </article>
-
-        <article class="row homepage__group">
-          <header class="col col--group col--2of3 row">
-            <h3 class="col col--group col--1of2">Reinvestments</h3>
-            <img src="../media/wg/reinvestments.jpg" alt="" class="col col--group col--1of2"/>
-          </header>
-          <div class="col col--group col--1of3">
-            <h4>Ac dui amet, id aenean vel, dolor augue. Nascetur id nec velit.</h4>
-            <p>By Allison Langham-Putrow, Katharine Macy, Jen Ticknor, Robert Heaton, James Stemper, Jian Wang, Nick Shockey, Michele Gibney, Yuan Li</p>
-          </div>
-        </article>
+        {% for item in site.data.nav.items %}
+          {% if item.working_group %}
+            <a href="{{ site.baseurl }}{{ item.link }}" style="display: block;">
+              <article class="row homepage__group">
+                <header class="col col--group col--2of3 row">
+                  <h3 class="col col--group col--1of2">{{ item.name }}</h3>
+                  <img src="../media/wg/{{ item.cover_img }}" alt="" class="col col--group col--1of2"/>
+                </header>
+                <div class="col col--group col--1of3">
+                  <h4>Ac dui amet, id aenean vel, dolor augue. Nascetur id nec velit.</h4>
+                  <p>By Sian Brannon, Evelyn Bruneau, Carrie Nelson, Caitlin Carter</p>
+                </div>
+              </article>
+            </a>
+          {% endif %}
+        {% endfor %}
       </section>
 
       <section class="row row--centered">

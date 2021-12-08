@@ -1,0 +1,21 @@
+items:
+  - name: Home
+    link: /
+  - name: About
+    link: /about.html
+  - name: Campus Partnerships Planning
+    link: /campus-partnerships-planning.html
+    working_group: true
+    cover_img: campus-partnerships.jpg
+  - name: Data Analysis
+    link: /data-analysis.html
+    working_group: true
+    cover_img: data-analysis.jpg
+  - name: Journal Cancellation Impact
+    link: /journal-cancellation-impact.html
+    working_group: true
+    cover_img: journal-cancellation.jpg
+  - name: Reinvestments
+    link: /reinvestments.html
+    working_group: true
+    cover_img: reinvestments.jpg
