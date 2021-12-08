@@ -33,7 +33,6 @@ collections:
       - {label: "Publishing Date", name: "date", widget: "datetime"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Topic(s)", name: "topics", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {
           label: "Author",
           name: "author",
@@ -43,6 +42,7 @@ collections:
           search_fields: [display_name],
           value_field: "name",
         }
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "data-analysis"
     label: "Data Analysis"
     folder: "_data-analysis/"
@@ -52,7 +52,6 @@ collections:
       - {label: "Publishing Date", name: "date", widget: "datetime"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Topic(s)", name: "topics", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {
           label: "Author",
           name: "author",
@@ -62,6 +61,7 @@ collections:
           search_fields: [display_name],
           value_field: "name",
         }
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "journal-cancellation-impact"
     label: "Journal Cancellation Impact"
     folder: "_journal-cancellation-impact/"
@@ -71,7 +71,6 @@ collections:
       - {label: "Publishing Date", name: "date", widget: "datetime"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Topic(s)", name: "topics", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {
           label: "Author",
           name: "author",
@@ -81,6 +80,7 @@ collections:
           search_fields: [display_name],
           value_field: "name",
         }
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "reinvestments"
     label: "Reinvestments"
     folder: "_reinvestments/"
@@ -90,7 +90,6 @@ collections:
       - {label: "Publishing Date", name: "date", widget: "datetime"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Topic(s)", name: "topics", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {
           label: "Author",
           name: "author",
@@ -100,3 +99,4 @@ collections:
           search_fields: [display_name],
           value_field: "name",
         }
+      - {label: "Body", name: "body", widget: "markdown"}
