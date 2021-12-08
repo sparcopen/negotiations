@@ -4,6 +4,16 @@ backend:
   branch: master
 media_folder: 'media/uploads'
 collections:
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - label: 'About Page'
+        name: 'about'
+        file: 'about.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'authors'
     label: 'Authors'
     folder: '_authors/'
