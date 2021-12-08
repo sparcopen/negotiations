@@ -20,19 +20,24 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Short Name", name: "name", widget: "string" }
+      - { label: "Short Name", name: "author_id", widget: "string" }
       - { label: "Display Name", name: "display_name", widget: "string" }
       - { label: "Contact email", name: "email", widget: "string" }
       - { label: "Link to bio", name: "link_bio", widget: "string" }
       - { label: "Bio", name: "bio", widget: "text" }
-  - name: "tags"
-    label: "Tags"
-    folder: "_tags/"
+  - name: "topics"
+    label: "Topics"
+    folder: "_topics/"
+    widget: "list"
+    allow_add: true
+    label_singular: "Add a new topic"
+    add_to_top: true
     create: true
-    fields:
     editor:
       preview: false
-    - { label: "Tag (topic)", name: "tag", widget: "string" }
+    fields:
+      - { label: "Topic (short name)", name: "topic_id", widget: "string" }
+      - { label: "Topic (full name)", name: "topic", widget: "string" }
   - name: "campus-partnerships-planning"
     label: "Campus Partnerships Planning"
     folder: "_campus-partnerships-planning/"
@@ -41,7 +46,15 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Publishing Date", name: "date", widget: "datetime"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Topic(s)", name: "topics", widget: "list"}
+      - {
+          label: "Topic(s)",
+          name: "article_topics",
+          widget: "relation",
+          collection: "topics",
+          display_fields: [topic],
+          search_fields: [topic],
+          value_field: "topic_id",
+        }
       - {
           label: "Author",
           name: "author",
@@ -49,7 +62,7 @@ collections:
           collection: "authors",
           display_fields: [display_name],
           search_fields: [display_name],
-          value_field: "name",
+          value_field: "author_id",
         }
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "data-analysis"
@@ -60,7 +73,15 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Publishing Date", name: "date", widget: "datetime"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Topic(s)", name: "topics", widget: "list"}
+      - {
+          label: "Topic(s)",
+          name: "article_topics",
+          widget: "relation",
+          collection: "topics",
+          display_fields: [topic],
+          search_fields: [topic],
+          value_field: "topic_id",
+        }
       - {
           label: "Author",
           name: "author",
@@ -68,7 +89,7 @@ collections:
           collection: "authors",
           display_fields: [display_name],
           search_fields: [display_name],
-          value_field: "name",
+          value_field: "author_id",
         }
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "journal-cancellation-impact"
@@ -79,7 +100,15 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Publishing Date", name: "date", widget: "datetime"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Topic(s)", name: "topics", widget: "list"}
+      - {
+          label: "Topic(s)",
+          name: "article_topics",
+          widget: "relation",
+          collection: "topics",
+          display_fields: [topic],
+          search_fields: [topic],
+          value_field: "topic_id",
+        }
       - {
           label: "Author",
           name: "author",
@@ -87,7 +116,7 @@ collections:
           collection: "authors",
           display_fields: [display_name],
           search_fields: [display_name],
-          value_field: "name",
+          value_field: "author_id",
         }
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "reinvestments"
@@ -98,7 +127,15 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Publishing Date", name: "date", widget: "datetime"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Topic(s)", name: "topics", widget: "list"}
+      - {
+          label: "Topic(s)",
+          name: "article_topics",
+          widget: "relation",
+          collection: "topics",
+          display_fields: [topic],
+          search_fields: [topic],
+          value_field: "topic_id",
+        }
       - {
           label: "Author",
           name: "author",
@@ -106,6 +143,6 @@ collections:
           collection: "authors",
           display_fields: [display_name],
           search_fields: [display_name],
-          value_field: "name",
+          value_field: "author_id",
         }
       - {label: "Body", name: "body", widget: "markdown"}
