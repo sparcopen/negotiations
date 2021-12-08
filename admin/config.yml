@@ -13,7 +13,6 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "hidden", default: "about" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "about" }
-          - { label: "Body", name: "body", widget: "markdown" }
   - name: "authors"
     label: "Authors"
     folder: "_authors/"
@@ -22,8 +21,10 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "author" }
       - { label: "Short Name", name: "name", widget: "string" }
       - { label: "Display Name", name: "display_name", widget: "string" }
-      - { label: "Position", name: "position", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Contact email", name: "email", widget: "string" }
+      - { label: "Link to bio", name: "link_bio", widget: "string" }
+      - { label: "Bio", name: "bio", widget: "text" }
   - name: "campus-partnerships-planning"
     label: "Campus Partnerships Planning"
     folder: "_campus-partnerships-planning/"
