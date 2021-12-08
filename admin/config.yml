@@ -25,7 +25,7 @@ collections:
       - { label: 'Position', name: 'position', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'campus-partnerships-planning'
-    label: 'CPP'
+    label: 'Campus Partnerships Planning'
     folder: '_campus-partnerships-planning/'
     create: true
     fields:
@@ -63,7 +63,7 @@ collections:
           value_field: 'name',
         }
   - name: 'journal-cancellation-impact'
-    label: 'JCI'
+    label: 'Journal Cancellation Impact'
     folder: '_journal-cancellation-impact/'
     create: true
     fields:
