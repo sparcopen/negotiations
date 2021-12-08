@@ -2,31 +2,31 @@ backend:
   name: git-gateway
   repo: sssoz/negotiations
   branch: master
-media_folder: 'media/uploads'
+media_folder: "media/uploads"
 collections:
-  - name: 'pages'
-    label: 'Pages'
+  - name: "pages"
+    label: "Pages"
     files:
-      - label: 'About Page'
-        name: 'about'
-        file: 'about.md'
+      - label: "About Page"
+        name: "about"
+        file: "about.md"
         fields:
-          - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
-          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'authors'
-    label: 'Authors'
-    folder: '_authors/'
+          - { label: "Title", name: "title", widget: "hidden", default: "about" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "about" }
+          - { label: "Body", name: "body", widget: "markdown" }
+  - name: "authors"
+    label: "Authors"
+    folder: "_authors/"
     create: true
     fields:
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'author' }
-      - { label: 'Short Name', name: 'name', widget: 'string' }
-      - { label: 'Display Name', name: 'display_name', widget: 'string' }
-      - { label: 'Position', name: 'position', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'campus-partnerships-planning'
-    label: 'Campus Partnerships Planning'
-    folder: '_campus-partnerships-planning/'
+      - { label: "Layout", name: "layout", widget: "hidden", default: "author" }
+      - { label: "Short Name", name: "name", widget: "string" }
+      - { label: "Display Name", name: "display_name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "campus-partnerships-planning"
+    label: "Campus Partnerships Planning"
+    folder: "_campus-partnerships-planning/"
     create: true
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
@@ -35,17 +35,17 @@ collections:
       - {label: "Topic(s)", name: "topics", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {
-          label: 'Author',
-          name: 'author',
-          widget: 'relation',
-          collection: 'authors',
+          label: "Author",
+          name: "author",
+          widget: "relation",
+          collection: "authors",
           display_fields: [display_name],
           search_fields: [display_name],
-          value_field: 'name',
+          value_field: "name",
         }
-  - name: 'data-analysis'
-    label: 'Data Analysis'
-    folder: '_data-analysis/'
+  - name: "data-analysis"
+    label: "Data Analysis"
+    folder: "_data-analysis/"
     create: true
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
@@ -54,17 +54,17 @@ collections:
       - {label: "Topic(s)", name: "topics", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {
-          label: 'Author',
-          name: 'author',
-          widget: 'relation',
-          collection: 'authors',
+          label: "Author",
+          name: "author",
+          widget: "relation",
+          collection: "authors",
           display_fields: [display_name],
           search_fields: [display_name],
-          value_field: 'name',
+          value_field: "name",
         }
-  - name: 'journal-cancellation-impact'
-    label: 'Journal Cancellation Impact'
-    folder: '_journal-cancellation-impact/'
+  - name: "journal-cancellation-impact"
+    label: "Journal Cancellation Impact"
+    folder: "_journal-cancellation-impact/"
     create: true
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
@@ -73,17 +73,17 @@ collections:
       - {label: "Topic(s)", name: "topics", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {
-          label: 'Author',
-          name: 'author',
-          widget: 'relation',
-          collection: 'authors',
+          label: "Author",
+          name: "author",
+          widget: "relation",
+          collection: "authors",
           display_fields: [display_name],
           search_fields: [display_name],
-          value_field: 'name',
+          value_field: "name",
         }
-  - name: 'reinvestments'
-    label: 'Reinvestments'
-    folder: '_reinvestments/'
+  - name: "reinvestments"
+    label: "Reinvestments"
+    folder: "_reinvestments/"
     create: true
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
@@ -92,11 +92,11 @@ collections:
       - {label: "Topic(s)", name: "topics", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {
-          label: 'Author',
-          name: 'author',
-          widget: 'relation',
-          collection: 'authors',
+          label: "Author",
+          name: "author",
+          widget: "relation",
+          collection: "authors",
           display_fields: [display_name],
           search_fields: [display_name],
-          value_field: 'name',
+          value_field: "name",
         }
