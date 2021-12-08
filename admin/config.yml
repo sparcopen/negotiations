@@ -4,6 +4,15 @@ backend:
   branch: master
 media_folder: 'media/uploads'
 collections:
+  - name: 'authors'
+    label: 'Authors'
+    create: true
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'author' }
+      - { label: 'Short Name', name: 'name', widget: 'string' }
+      - { label: 'Display Name', name: 'display_name', widget: 'string' }
+      - { label: 'Position', name: 'position', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'campus-partnerships-planning'
     label: 'CPP'
     folder: '_campus-partnerships-planning/'
@@ -14,6 +23,15 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Topic(s)", name: "topics", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {
+          label: 'Author',
+          name: 'author',
+          widget: 'relation',
+          collection: 'authors',
+          display_fields: [display_name],
+          search_fields: [display_name],
+          value_field: 'name',
+        }
   - name: 'data-analysis'
     label: 'Data Analysis'
     folder: '_data-analysis/'
@@ -24,6 +42,15 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Topic(s)", name: "topics", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {
+          label: 'Author',
+          name: 'author',
+          widget: 'relation',
+          collection: 'authors',
+          display_fields: [display_name],
+          search_fields: [display_name],
+          value_field: 'name',
+        }
   - name: 'journal-cancellation-impact'
     label: 'JCI'
     folder: '_journal-cancellation-impact/'
@@ -34,6 +61,15 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Topic(s)", name: "topics", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {
+          label: 'Author',
+          name: 'author',
+          widget: 'relation',
+          collection: 'authors',
+          display_fields: [display_name],
+          search_fields: [display_name],
+          value_field: 'name',
+        }
   - name: 'reinvestments'
     label: 'Reinvestments'
     folder: '_reinvestments/'
@@ -44,3 +80,12 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Topic(s)", name: "topics", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {
+          label: 'Author',
+          name: 'author',
+          widget: 'relation',
+          collection: 'authors',
+          display_fields: [display_name],
+          search_fields: [display_name],
+          value_field: 'name',
+        }
