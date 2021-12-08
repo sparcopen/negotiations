@@ -29,16 +29,17 @@ plugins:
 
 collections:
   campus_partnerships_planning:
+    permalink: "/:collection/:path/"
     output: true
   data_analysis:
+    permalink: "/:collection/:path/"
     output: true
   journal_cancellation_impact:
+    permalink: "/:collection/:path/"
     output: true
   reinvestments:
-    output: true
-  members:
+    permalink: "/:collection/:path/"
     output: true
   topics:
-    output: true
-  reports:
+    permalink: "/:collection/:path/"
     output: true
