@@ -18,6 +18,10 @@
     @include typescale-02;
   }
 
+  .tag a {
+    background: $white;
+  }
+
   .label a {
     color: $white;
   }

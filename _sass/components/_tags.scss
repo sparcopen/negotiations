@@ -1,6 +1,6 @@
 .tags {
   @include unstyled-list($inline: true);
-  padding: $spacing-02;
+  padding: $spacing-02 $spacing-02 $spacing-02 0;
 }
 
 .tag a {
