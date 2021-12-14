@@ -4,6 +4,21 @@ backend:
   branch: master
 media_folder: "media/uploads"
 collections:
+  - name: 'config'
+  label: 'Config'
+  editor:
+    preview: false
+  files:
+    - label: 'Navigation'
+      name: 'nav'
+      file: '_data/nav.yml'
+      fields:
+        - label: 'Navigation Items'
+          name: 'items'
+          widget: 'list'
+          fields:
+            - { label: Name, name: name, widget: string }
+            - { label: Link, name: link, widget: string }
   - name: "pages"
     label: "Pages"
     files:
