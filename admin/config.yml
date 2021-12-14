@@ -55,6 +55,7 @@ collections:
           search_fields: [topic],
           value_field: "topic_id",
         }
+      - { label: "Article summary", name: "summary", widget: "text" }
       - {
           label: "Author",
           name: "author",
@@ -82,6 +83,7 @@ collections:
           search_fields: [topic],
           value_field: "topic_id",
         }
+      - { label: "Article summary", name: "summary", widget: "text" }
       - {
           label: "Author",
           name: "author",
@@ -109,6 +111,7 @@ collections:
           search_fields: [topic],
           value_field: "topic_id",
         }
+      - { label: "Article summary", name: "summary", widget: "text" }
       - {
           label: "Author",
           name: "author",
@@ -136,6 +139,7 @@ collections:
           search_fields: [topic],
           value_field: "topic_id",
         }
+      - { label: "Article summary", name: "summary", widget: "text" }
       - {
           label: "Author",
           name: "author",
