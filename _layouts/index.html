@@ -28,7 +28,7 @@
 
         {% for item in site.data.nav.items %}
           {% if item.working_group %}
-            <a href="{{ site.baseurl }}{{ item.link }}" style="display: block;">
+            <a href="{{ site.baseurl }}/{{ item.slug }}" style="display: block;">
               <article class="row homepage__group">
                 <header class="col col--group col--2of3 row">
                   <h3 class="col col--group col--1of2">{{ item.name }}</h3>
