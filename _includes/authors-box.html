@@ -1,9 +1,8 @@
+{% if page.authors %}
 <section class="infobox infobox--authors">
-  {% if page.authors %}
   <h2>
     About the author{% if page.authors[0].size > 1 %}s{% endif %}
   </h2>
-
   {% for author in page.authors %}
   {% assign au = site.data.authors[author] %}
   <article class="row">
@@ -30,47 +29,5 @@
     </div>
   </article>
   {% endfor %}
-
-  {% else %}
-  <h2>About the authors</h2>
-
-  <article class="row">
-    <div class="col col--1of3 col--group">
-      <figure class="portrait">
-        <img src="{{ site.BASE_PATH }}/media/team/claudio.png" alt="Portrait of Claudio Aspesi"/>
-      </figure>
-    </div>
-    <div class="col col--2of3 col--group">
-      <h3>{{ site.data.authors.claudio[0].full_name }}</h3>
-      <p>{{ site.data.authors.claudio[0].short_bio }}</p>
-      <p class="infobox__links">
-        <a href="{{ site.BASE_PATH }}/claudio-aspesi">
-          {% include svg/arrow-right.svg %}  About
-        </a>
-      </p>
-    </div>
-  </article>
-
-  <article class="row">
-    <div class="col col--1of3 col--group">
-      {% include svg/logo.svg %}
-    </div>
-    <div class="col col--2of3 col--group">
-      <h3>{{ site.data.authors.sparc[0].full_name }}</h3>
-      <p>{{ site.data.authors.sparc[0].short_bio }}</p>
-      <p class="infobox__links">
-        <a href="https://sparcopen.org/who-we-are/" target="_blank" rel="noopener">
-          {% include svg/arrow-right.svg %}  About
-        </a>
-        <a href="https://sparcopen.org/contact/" target="_blank" rel="noopener">
-          {% include svg/mail.svg %}&nbsp;Contact us
-        </a>
-      </p>
-    </div>
-  </article>
-  <!-- Not sure about the authors page, so hiding this for now.
-  <p>
-    <a href="{{ site.BASE_PATH }}/about" class="button button--cta">About us</a>
-  </p>-->
-  {% endif %}
 </section>
+{% endif %}
