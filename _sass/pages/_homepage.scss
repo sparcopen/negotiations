@@ -83,10 +83,7 @@
     margin-bottom: $spacing-06;
     width: 100%;
     min-height: 20vh;
-
-    &:nth-child(odd) {
-      flex-direction: row-reverse;
-    }
+    justify-content: space-between;
 
     header {
       margin-bottom: $spacing-03;
@@ -94,7 +91,7 @@
       color: $black;
 
       @media (min-width: 768px) {
-        margin-right: -2.5vw;
+        margin-left: -2.5vw;
       }
     }
 
@@ -104,6 +101,16 @@
 
     h4 {
       @include font-serif;
+    }
+
+    &:nth-of-type(odd) {
+      flex-direction: row-reverse;
+
+      header {
+        @media (min-width: 768px) {
+          margin-right: -2.5vw;
+        }
+      }
     }
 
     &:last-child {
