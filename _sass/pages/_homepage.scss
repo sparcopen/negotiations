@@ -9,6 +9,7 @@
   }
 
   a {
+    color: $white;
     text-decoration: none;
   }
 
@@ -88,6 +89,10 @@
       margin-bottom: $spacing-03;
       background: $white;
       color: $black;
+
+      a {
+        color: $black;
+      }
 
       @media (min-width: 768px) {
         margin-left: -2.5vw;
