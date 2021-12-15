@@ -9,43 +9,22 @@
           {% include svg/bookmark.svg %}
           <span class="sr-only">Return to homepage</span>
         </a>
-        <p class="label">
-          {% if page.collection == 'reports' %}
-          Report<br/>
-          <time datetime="{{ page.date | date: '%F' }}">
-            {{ page.date | date: "%b %e, %Y" }}
-          </time>
-          {% elsif page.name == "latest.md" or page.name == "members.md" %}
-
-          {% else %}
-          Topic
-          {% endif %}
-        </p>
+        <p class="label">Working Group</p>
         <h1>{{ page.title }}</h1>
-        <p>{{ page.description }}</p>
       </header>
 
       <div class="col col--2of3 page-sidebar-content">
         <section class="page-content">
+          {{ page.content | markdownify }}
+
           {% if page.name == "members.md" %}
           {% include members-box.html %}
           {% endif %}
-          <h2>
-            {% if page.collection == 'reports' %}
-            Table of Contents
-            {% else %}
-            Contents
-            {% endif %}
-          </h2>
+          <h2>Contents</h2>
           {% if page.pdf %}
           <a href="{{ page.pdf }}" class="button button--cta" download>
             Download
           </a>
-          {% endif %}
-
-          {% if page.collection == 'reports' %}
-            <a href="#citationContent" class="button accordion-toggle">Cite this report</a>
-            {% include citation.html class="accordion__content" id="citationContent"%}
           {% endif %}
 
           <ul class="toc toc--with-feature col--group">
