@@ -4,21 +4,6 @@ backend:
   branch: master
 media_folder: "media/uploads"
 collections:
-  - name: 'config'
-    label: 'Config'
-    editor:
-      preview: false
-    files:
-      - label: 'Navigation'
-        name: 'nav'
-        file: '_data/nav.yml'
-        fields:
-          - label: 'Navigation Items'
-            name: 'items'
-            widget: 'list'
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Link, name: link, widget: string }
   - name: "pages"
     label: "Landing pages"
     files:
@@ -28,6 +13,22 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "hidden", default: "about" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "about" }
+      - label: "Campus Partnerships Planning"
+        name: "campus-partnerships-planning"
+        file: "campus-partnerships-planning/index.md"
+        create: true
+        fields:
+          - { label: "Title", name: "title", widget: "hidden", default: "Data Analysis"}
+          - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Data Analysis"
+        name: "data-analysis"
+        file: "data-analysis/index.md"
+        create: true
+        fields:
+          - { label: "Title", name: "title", widget: "hidden", default: "Data Analysis"}
+          - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
+          - {label: "Body", name: "body", widget: "markdown"}
   - name: "authors"
     label: "Authors"
     folder: "_authors/"
