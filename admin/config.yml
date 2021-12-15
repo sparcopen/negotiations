@@ -20,14 +20,30 @@ collections:
               - { label: Name, name: name, widget: string }
               - { label: Link, name: link, widget: string }
   - name: "pages"
-    label: "Pages"
+    label: "Landing pages"
     files:
-      - label: "About Page"
+      - label: "About"
         name: "about"
         file: "about.md"
         fields:
           - { label: "Title", name: "title", widget: "hidden", default: "about" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "about" }
+      - label: "Campus Partnerships Planning"
+        name: "campus-partnerships-planning"
+        file: "campus-partnerships-planning/index.md"
+        create: true
+        fields:
+          - { label: "Title", name: "title", widget: "hidden", default: "Data Analysis"}
+          - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Data Analysis"
+        name: "data-analysis"
+        file: "data-analysis/index.md"
+        create: true
+        fields:
+          - { label: "Title", name: "title", widget: "hidden", default: "Data Analysis"}
+          - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
+          - {label: "Body", name: "body", widget: "markdown"}
   - name: "authors"
     label: "Authors"
     folder: "_authors/"
