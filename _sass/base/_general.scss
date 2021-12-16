@@ -80,6 +80,7 @@ code {
 a {
   text-decoration: underline;
   transition: all 250ms ease;
+  color: $black;
 
   &:hover,
   &:focus,
