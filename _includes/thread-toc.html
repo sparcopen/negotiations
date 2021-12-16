@@ -1,4 +1,4 @@
-{% assign thread = page.url | remove: "/" | remove: "index.html" %}
+{% assign thread = page.url | remove: "/" | remove: ".html" %}
 
 {% for post in site[thread] %}
   {% include post.html %}
