@@ -96,7 +96,7 @@ collections:
           multiple: true,
           display_fields: [display_name],
           search_fields: [display_name],
-          value_field: "author_id",
+          value_field: "display_name",
           required: false
         }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -128,7 +128,7 @@ collections:
           multiple: true,
           display_fields: [display_name],
           search_fields: [display_name],
-          value_field: "author_id",
+          value_field: "display_name",
           required: false
         }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -160,7 +160,7 @@ collections:
           multiple: true,
           display_fields: [display_name],
           search_fields: [display_name],
-          value_field: "author_id",
+          value_field: "display_name",
           required: false
         }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -192,7 +192,7 @@ collections:
           multiple: true,
           display_fields: [display_name],
           search_fields: [display_name],
-          value_field: "author_id",
+          value_field: "display_name",
           required: false
         }
       - { label: "Body", name: "body", widget: "markdown" }
