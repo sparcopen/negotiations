@@ -1,7 +1,7 @@
 .homepage {
   padding: 2.5vw;
-  background-color: $black;
-  color: $white;
+  background-color: $white;
+  color: $black;
   @include font-sans;
 
   h2, h3, h4 {
@@ -9,7 +9,7 @@
   }
 
   a {
-    color: $white;
+    color: $black;
     text-decoration: none;
   }
 
@@ -26,14 +26,14 @@
     border-color: $white;
 
     &:hover, &:active, &:focus {
-      background-color: $white;
-      color: $black;
+      background-color: $black;
+      color: $white;
     }
   }
 
   .tag a {
-    background-color: $white;
-    color: $black;
+    background-color: $black;
+    color: $white;
     line-height: 2.5;
   }
 
@@ -45,7 +45,7 @@
   .logo path:first-child,
   .cc-icon path:last-child,
   .gh-icon path {
-    fill: $white;
+    fill: $black;
   }
 
   &__header {
@@ -56,7 +56,7 @@
     margin-bottom: $spacing-03;
     padding: $spacing-04;
     background: $red url('../../media/pattern-red.png') repeat;
-    color: $white;
+    color: $black;
 
     @media (min-width: 768px) {
       margin-left: -2.5vw;
@@ -69,13 +69,13 @@
 
   &__header--line {
     margin-bottom: $spacing-04;
-    background: linear-gradient($black 0%, $black 49%, $white 50%, $white 51%, $black 52%, $black 100%);
+    background: linear-gradient($white 0%, $white 49%, $black 50%, $black 51%, $white 52%, $white 100%);
     text-align: center;
 
     h2 {
       padding: 0 $spacing-03;
       display: inline-block;
-      background: $black;
+      background: $white;
     }
   }
 
@@ -87,11 +87,11 @@
 
     header {
       margin-bottom: $spacing-03;
-      background: $white;
-      color: $black;
+      background: $black;
+      color: $white;
 
       a {
-        color: $black;
+        color: $white;
       }
 
       @media (min-width: 768px) {
@@ -145,7 +145,7 @@
     }
 
     li:not(:last-child) a {
-      border-bottom: 1px solid $white;
+      border-bottom: 1px solid $black;
     }
   }
 }
