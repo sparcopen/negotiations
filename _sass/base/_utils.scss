@@ -12,6 +12,9 @@
   }
 }
 
+.font-serif {
+  @include font-serif;
+}
 
 .print-only {
   display: none;

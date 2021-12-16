@@ -14,10 +14,10 @@
           </time>
         </p>
         <h1>{{ page.title }}</h1>
-        {% if page.author %}
+        {% if page.authors %}
         <p class="post__summary">
           <small>
-            <em>By</em>
+            <em class="font-serif">By</em>
             {% for author in page.authors %}
               {% if forloop.last %}
                 {{ author }}

@@ -10,17 +10,32 @@
           {{ post.title }}{% if post.link %} {% include svg/arrow-northeast.svg %}{% endif %}
         </a>
       </h4>
+      {% if post.authors %}
+      <p class="metadata">
+        <small>
+          {% for author in post.authors %}
+            {% if forloop.last %}
+              {{ author }}
+            {% else %}
+              {{ author }},
+            {% endif %}
+          {% endfor %}
+        </small>
+      </p>
+      {% endif %}
     </header>
     <div class="col col--group col--2of3">
       {% if post.summary %}
       <p>{{ post.summary }}</p>
       {% endif %}
       <p class="metadata label">
-        {% if post.link %}
-          {{ post.reading-time }}
-        {% else %}
-          {% include post-readtime.html %}
-        {% endif %}
+        <small>
+          {% if post.link %}
+            {{ post.reading-time }}
+          {% else %}
+            {% include post-readtime.html %}
+          {% endif %}
+        </small>
       </p>
     </div>
   </article>

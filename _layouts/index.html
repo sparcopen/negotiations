@@ -44,10 +44,10 @@
                     </time>
                   </p>
                   <h4>{{ post.title }}</h4>
-                  {% if post.author %}
+                  {% if post.authors %}
                   <p class="post__summary">
                     <small>
-                      <em>By</em>
+                      <em class="font-serif">By</em>
                       {% for author in post.authors %}
                         {% if forloop.last %}
                           {{ author }}
