@@ -189,6 +189,7 @@ collections:
   - name: "blog"
     label: "Blog"
     folder: "_blog/"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
