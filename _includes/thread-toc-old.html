@@ -1,0 +1,51 @@
+{% assign thread = page.permalink | remove: "/" %}
+
+{% comment %}
+  Identify thread types:
+  - reports (using categories)
+  - topics (using tags)
+{% endcomment %}
+{% if page.collection == 'reports' %}
+  {% assign thread_type = "categories" %}
+{% else %}
+  {% assign thread_type = "tags" %}
+{% endif %}
+
+{% comment %}
+  Determine post order.
+{% endcomment %}
+{% if page.name == "latest.md" %}
+  {% assign posts = site.posts %}
+{% elsif page.name == "members.md" %}
+  {% assign posts = site.members | reverse %}
+{% elsif page.reversed %}
+  {% assign posts = site.[thread_type].[thread] | reverse %}
+{% else %}
+  {% assign posts = site.[thread_type].[thread] %}
+{% endif %}
+
+{% if thread_type == "tags" %}
+  <!-- For tag / topic-based threads, display featured post first  -->
+  {% for post in posts %}
+    {% if post.featured %}
+      {% include featured-post.html %}
+    {% endif %}
+  {% endfor %}
+{% elsif thread_type == "categories" %}
+  <!-- For category / reports, display latest post as featured post -->
+  {% for post in posts limit: 1 %}
+    {% include featured-post.html %}
+  {% endfor %}
+{% endif %}
+
+{% if thread_type == "tags" %}
+  <!-- Display all topic posts -->
+  {% for post in posts %}
+    {% include post.html %}
+  {% endfor %}
+{% elsif thread_type == "categories" %}
+  <!-- Display rest of report posts -->
+  {% for post in posts offset: 1 %}
+    {% include post.html %}
+  {% endfor %}
+{% endif %}

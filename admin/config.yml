@@ -15,7 +15,7 @@ collections:
           - { label: "Layout", name: "layout", widget: "hidden", default: "about" }
       - label: "Campus Partnerships Planning"
         name: "campus-partnerships-planning"
-        file: "campus-partnerships-planning/index.md"
+        file: "campus-partnerships-planning.md"
         create: true
         fields:
           - { label: "Title", name: "title", widget: "hidden", default: "Data Analysis"}
@@ -23,7 +23,7 @@ collections:
           - {label: "Body", name: "body", widget: "markdown"}
       - label: "Data Analysis"
         name: "data-analysis"
-        file: "data-analysis/index.md"
+        file: "data-analysis.md"
         create: true
         fields:
           - { label: "Title", name: "title", widget: "hidden", default: "Data Analysis"}
