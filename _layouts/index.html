@@ -30,14 +30,16 @@
           {% if item.working_group %}
             <article class="row homepage__group">
               <header class="col col--group col--2of3 row">
-                <a href="{{ site.baseurl }}/{{ item.slug }}" class="col col--group col--1of2" style="display: block;">
-                  <h3>{{ item.name }}</h3>
+                <a href="{{ site.baseurl }}/{{ item.name }}" class="col col--group col--1of2" style="display: block;">
+                  <h3>{{ item.label }}</h3>
                 </a>
                   <img src="../media/wg/{{ item.cover_img }}" alt="" class="col col--group col--1of2"/>
               </header>
               <div class="col col--group col--1of3">
-                <h4>Ac dui amet, id aenean vel, dolor augue. Nascetur id nec velit.</h4>
-                <p>By Sian Brannon, Evelyn Bruneau, Carrie Nelson, Caitlin Carter</p>
+                {% for post in site[item.name] limit:1 %}
+                <h4>{{ post.title }}</h4>
+                <p><em>By</em> {{ post.url }}</p>
+                {% endfor %}
               </div>
             </article>
           {% endif %}

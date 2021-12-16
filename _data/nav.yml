@@ -1,21 +1,21 @@
 items:
-  - name: Home
-    slug: /
-  - name: About
-    slug: about
-  - name: Campus Partnerships Planning
-    slug: campus-partnerships-planning
+  - label: Home
+    name: /
+  - label: About
+    name: about
+  - label: Campus Partnerships Planning
+    name: campus-partnerships-planning
     working_group: true
     cover_img: campus-partnerships.jpg
-  - name: Data Analysis
-    slug: data-analysis
+  - label: Data Analysis
+    name: data-analysis
     working_group: true
     cover_img: data-analysis.jpg
-  - name: Journal Cancellation Impact
-    slug: journal-cancellation-impact
+  - label: Journal Cancellation Impact
+    name: journal-cancellation-impact
     working_group: true
     cover_img: journal-cancellation.jpg
-  - name: Reinvestments
-    slug: reinvestments
+  - label: Reinvestments
+    name: reinvestments
     working_group: true
     cover_img: reinvestments.jpg
