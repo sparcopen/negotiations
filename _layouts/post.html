@@ -14,7 +14,15 @@
           </time>
         </p>
         <h1>{{ page.title }}</h1>
-        {% if page.author %}<p class="post__summary"><small><em>By</em> {{ page.author }}</small></p>{% endif %}
+        {% if page.author %}
+        <p class="post__summary">
+          <small>
+            <em>By</em>
+            {% for author in page.authors %}
+              {{ author }}
+            {% endfor %}
+          </small></p>
+        {% endif %}
         {% if page.summary %}<p class="post__summary">{{ page.summary }}</p>{% endif %}
         <p class="post__read-time">
           {% assign words = page.content | number_of_words %}
@@ -65,12 +73,12 @@
 
         {% include citation.html class="accordion__content" id="citationContent"%}
 
-        {% if page.tags.size > 0 %}
+        {% if page.article_topics.size > 0 %}
         <h2>Related</h2>
         <ul class="tags">
-          {% for tag in page.tags %}
-          {% assign tag_name = tag | replace: '-',' ' %}
-          <li class="tag"><a href="../{{ tag }}">{{ tag_name | capitalize }}</a></li>
+        {{ page.article_topics }}
+          {% for tag in page.article_topics %}
+          <li class="tag"><a href="../{{ tag }}">{{ tag }}</a></li>
           {% endfor %}
         </ul>
         {% endif %}
