@@ -49,11 +49,17 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Short Name (used as identifier)", name: "author_id", widget: "string" }
-      - { label: "Display Name", name: "display_name", widget: "string" }
-      - { label: "Contact email", name: "email", widget: "string", required: false }
-      - { label: "Link to external bio", name: "link_bio", widget: "string", required: false }
-      - { label: "Short bio", name: "bio", widget: "text", required: false }
+      - label: 'Author'
+        name: 'author'
+        label_singular: 'Author'
+        identifier_field: author_id
+        widget: 'list'
+        fields:
+          - { label: "Short Name (used as identifier)", name: "author_id", widget: "string" }
+          - { label: "Display Name", name: "display_name", widget: "string" }
+          - { label: "Contact email", name: "email", widget: "string", required: false }
+          - { label: "Link to external bio", name: "link_bio", widget: "string", required: false }
+          - { label: "Short bio", name: "bio", widget: "text", required: false }
   - name: "topics"
     label: "Topics"
     folder: "_topics/"
@@ -87,13 +93,14 @@ collections:
         }
       - { label: "Article summary", name: "summary", widget: "text", required: false }
       - {
-          label: "Author",
-          name: "author",
+          label: "Authors",
+          name: "authors",
           widget: "relation",
           collection: "authors",
-          display_fields: [display_name],
-          search_fields: [display_name],
-          value_field: "author_id",
+          multiple: true,
+          display_fields: ['author.*.display_name'],
+          search_fields: [author],
+          value_field: "author.*.author_id",
           required: false
         }
       - { label: "Body", name: "body", widget: "markdown" }
