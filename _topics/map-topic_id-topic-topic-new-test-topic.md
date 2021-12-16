@@ -1,4 +1,4 @@
 ---
-topic_id: topic
+topic_id: new-topic
 topic: "New Test Topic "
 ---
