@@ -1,7 +1,11 @@
 <li class="toc__item">
   <article class="row">
     <header class="col col--group col--1of3">
-      {% if post.section %}<p class="label"><small>{{ post.section }}</small></p>{% endif %}
+      <p class="label">
+        <time datetime="{{ post.date | date: '%F' }}">
+          {{ post.date | date: "%b %e, %Y" }}
+        </time>
+      </p>
       <h4>
         <a {% if post.link %}href="{{ post.link }}" target="_blank" rel="noopener"{% else %}href="{{ post.url }}"{% endif %} class="toc__link">
           {{ post.title }}{% if post.link %} {% include svg/arrow-northeast.svg %}{% endif %}
@@ -16,8 +20,8 @@
       </p>
     </header>
     <div class="col col--group col--2of3">
-      {% if post.description %}
-      <p>{{ post.description }}</p>
+      {% if post.summary %}
+      <p>{{ post.summary }}</p>
       {% endif %}
 
       {% if thread_type == "tags" and post.category %}
