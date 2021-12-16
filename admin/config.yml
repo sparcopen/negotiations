@@ -186,3 +186,22 @@ collections:
           required: false
         }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "blog"
+    label: "Blog"
+    folder: "_blog/"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Publishing Date", name: "date", widget: "datetime" }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Topic(s)",
+          name: "article_topics",
+          widget: "relation",
+          collection: "topics",
+          display_fields: [topic],
+          search_fields: [topic],
+          value_field: "topic_id",
+          required: false
+        }
+      - { label: "Body", name: "body", widget: "markdown" }

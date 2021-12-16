@@ -75,42 +75,20 @@
         <header class="col col--1of2 homepage__header--bg">
           <h2>Recent analysis</h2>
           <p>{{ page.blog_text }}</p>
-          <a href="" class="button">See the blog</a>
+          <a href="{{ site.baseurl }}/blog" class="button">See the blog</a>
         </header>
         <div class="col col--1of2">
           <ol class="homepage__blog">
+            {% for post in site.blog limit:4 %}
             <li>
               <a href="">
                 <article>
-                  <time datetime="2020-10-12">Oct 12, 2020</time>
-                  <h3>Ac dui amet, id aenean vel, dolor augue. Nascetur id nec velit.</h3>
+                  <time datetime="{{ post.date | date: '%F' }}">{{ post.date | date: "%b %e, %Y" }}</time>
+                  <h3>{{ post.title }}</h3>
                 </article>
               </a>
             </li>
-            <li>
-              <a href="">
-                <article>
-                  <time datetime="2020-10-12">Oct 12, 2020</time>
-                  <h3>Adipiscing ultricies erat turpis adipiscing mi augue id. Amet.</h3>
-                </article>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <article>
-                  <time datetime="2020-10-12">Oct 12, 2020</time>
-                  <h3>Turpis viverra amet consequat faucibus suspendisse amet.</h3>
-                </article>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <article>
-                  <time datetime="2020-10-12">Oct 12, 2020</time>
-                  <h3>Malesuada nisl id aliquet euismod lobortis sagittis, tellus. </h3>
-                </article>
-              </a>
-            </li>
+            {% endfor %}
           </ol>
         </div>
       </section>
