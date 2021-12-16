@@ -1,4 +1,4 @@
 ---
 title: About
-layout: thread
+layout: about
 ---

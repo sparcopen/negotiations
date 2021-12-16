@@ -3,17 +3,16 @@
   {% include head.html %}
 
   <body class="post">
-    <main class="row">
-      <header class="col col--1of3 page-sidebar">
-        <a href="/#main" class="page-sidebar__home screen-only">
-          {% include svg/bookmark.svg %}
-          <span class="sr-only">Return to homepage</span>
-        </a>
-        <h1>{{ page.title }}</h1>
-        <p class="post__summary">{{ page.description }}</p>
-      </header>
+    <main class="row row--centered">
+      <div class="col col--1of2">
+        <header>
+          <a href="/#main" class="page-sidebar__home screen-only">
+            {% include svg/bookmark-inverted.svg %}
+            <span class="sr-only">Return to homepage</span>
+          </a>
+          <h1>{{ page.title }}</h1>
+        </header>
 
-      <div class="col col--3of6 page-sidebar-content">
         <article class="page-content">
           {{ page.content }}
         </article>
