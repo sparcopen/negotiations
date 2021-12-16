@@ -19,9 +19,14 @@
           <small>
             <em>By</em>
             {% for author in page.authors %}
-              {{ author }}
+              {% if forloop.last %}
+                {{ author }}
+              {% else %}
+                {{ author }},
+              {% endif %}
             {% endfor %}
-          </small></p>
+          </small>
+        </p>
         {% endif %}
         {% if page.summary %}<p class="post__summary">{{ page.summary }}</p>{% endif %}
         <p class="post__read-time">

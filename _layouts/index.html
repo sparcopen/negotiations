@@ -36,7 +36,7 @@
                   <img src="../media/wg/{{ item.cover_img }}" alt="" class="col col--group col--1of2"/>
               </header>
               <div class="col col--group col--1of3">
-                {% for post in site[item.name] limit:1 reversed %}
+                {% for post in site[item.name] limit:1 %}
                 <a href="{{ site.BASE_PATH }}/{{ item.name }}/{{ post.slug }}" style="display: block;">
                   <p class="label">
                     <time datetime="{{ post.date | date: '%F' }}">
@@ -44,7 +44,20 @@
                     </time>
                   </p>
                   <h4>{{ post.title }}</h4>
-                  <p><em>By</em> {{ post.display_name }}</p>
+                  {% if post.author %}
+                  <p class="post__summary">
+                    <small>
+                      <em>By</em>
+                      {% for author in post.authors %}
+                        {% if forloop.last %}
+                          {{ author }}
+                        {% else %}
+                          {{ author }},
+                        {% endif %}
+                      {% endfor %}
+                    </small>
+                  </p>
+                  {% endif %}
                 </a>
                 {% endfor %}
               </div>
@@ -75,7 +88,7 @@
         </header>
         <div class="col col--1of2">
           <ol class="homepage__blog">
-            {% for post in site.blog limit:4 reversed %}
+            {% for post in site.blog limit:4 %}
             <li>
               <a href="{{ site.BASE_PATH }}/{{ post.url }}" class="label">
                 <article>

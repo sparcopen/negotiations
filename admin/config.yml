@@ -50,8 +50,8 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Short Name (used as identifier)", name: "author_id", widget: "string" }
       - { label: "Display Name", name: "display_name", widget: "string" }
+      - { label: "Short Name (used as identifier)", name: "author_id", widget: "string" }
       - { label: "Contact email", name: "email", widget: "string", required: false }
       - { label: "Link to external bio", name: "link_bio", widget: "string", required: false }
       - { label: "Short bio", name: "bio", widget: "text", required: false }
@@ -127,7 +127,7 @@ collections:
           collection: "authors",
           display_fields: [display_name],
           search_fields: [display_name],
-          value_field: "author_id",
+          value_field: "display_name",
           required: false
         }
       - { label: "Body", name: "body", widget: "markdown" }
