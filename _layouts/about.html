@@ -14,7 +14,7 @@
         </header>
 
         <article class="page-content">
-          {{ page.content }}
+          {{ page.content | markdownify }}
         </article>
         {% include footer.html %}
       </div>
