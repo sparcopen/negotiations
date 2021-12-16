@@ -15,9 +15,11 @@
 
       <div class="col col--2of3 page-sidebar-content">
         <section class="page-content">
+          {% if page.content %}
           <div class="infobox">
             {{ page.content | markdownify }}
           </div>
+          {% endif %}
 
           {% if page.name == "members.md" %}
           {% include members-box.html %}
