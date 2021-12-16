@@ -59,14 +59,11 @@ collections:
     label_singular: "Topic"
     folder: "_topics/"
     widget: "list"
-    allow_add: true
-    add_to_top: true
     create: true
     editor:
       preview: false
     fields:
-      - { label: "Topic (short name)", name: "topic_id", widget: "string" }
-      - { label: "Topic (full name)", name: "topic", widget: "string" }
+      - { label: "Topic", name: "topic", widget: "string" }
   - name: "campus-partnerships-planning"
     label: "Campus Partnerships Planning"
     label_singular: "a new post"
@@ -78,17 +75,18 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Topic(s)",
-          name: "article_topics",
+          name: "topics",
           widget: "relation",
           collection: "topics",
+          multiple: true,
           display_fields: [topic],
           search_fields: [topic],
-          value_field: "topic_id",
+          value_field: "topic",
           required: false
         }
       - { label: "Article summary", name: "summary", widget: "text", required: false }
       - {
-          label: "Authors",
+          label: "Author(s)",
           name: "authors",
           widget: "relation",
           collection: "authors",
@@ -110,17 +108,18 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Topic(s)",
-          name: "article_topics",
+          name: "topics",
           widget: "relation",
           collection: "topics",
+          multiple: true,
           display_fields: [topic],
           search_fields: [topic],
-          value_field: "topic_id",
+          value_field: "topic",
           required: false
         }
       - { label: "Article summary", name: "summary", widget: "text", required: false }
       - {
-          label: "Authors",
+          label: "Author(s)",
           name: "authors",
           widget: "relation",
           collection: "authors",
@@ -142,17 +141,18 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Topic(s)",
-          name: "article_topics",
+          name: "topics",
           widget: "relation",
           collection: "topics",
+          multiple: true,
           display_fields: [topic],
           search_fields: [topic],
-          value_field: "topic_id",
+          value_field: "topic",
           required: false
         }
       - { label: "Article summary", name: "summary", widget: "text", required: false }
       - {
-          label: "Authors",
+          label: "Author(s)",
           name: "authors",
           widget: "relation",
           collection: "authors",
@@ -174,17 +174,18 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Topic(s)",
-          name: "article_topics",
+          name: "topics",
           widget: "relation",
           collection: "topics",
+          multiple: true,
           display_fields: [topic],
           search_fields: [topic],
-          value_field: "topic_id",
+          value_field: "topic",
           required: false
         }
       - { label: "Article summary", name: "summary", widget: "text", required: false }
       - {
-          label: "Authors",
+          label: "Author(s)",
           name: "authors",
           widget: "relation",
           collection: "authors",
