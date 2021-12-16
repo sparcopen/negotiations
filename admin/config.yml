@@ -17,14 +17,28 @@ collections:
         name: "campus-partnerships-planning"
         file: "campus-partnerships-planning.md"
         fields:
-          - { label: "Title", name: "title", widget: "hidden", default: "Data Analysis" }
+          - { label: "Title", name: "title", widget: "string", default: "Campus Partnerships Planning" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Data Analysis"
         name: "data-analysis"
         file: "data-analysis.md"
         fields:
-          - { label: "Title", name: "title", widget: "hidden", default: "Data Analysis" }
+          - { label: "Title", name: "title", widget: "string", default: "Data Analysis" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Journal Cancellation Impact"
+        name: "journal-cancellation-impact"
+        file: "journal-cancellation-impact.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string", default: "Journal Cancellation Impact" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Reinvestments"
+        name: "reinvestments"
+        file: "reinvestments.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string", default: "Reinvestments" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
           - { label: "Body", name: "body", widget: "markdown" }
   - name: "authors"
