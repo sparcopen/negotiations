@@ -17,16 +17,16 @@ collections:
         name: "campus-partnerships-planning"
         file: "campus-partnerships-planning.md"
         fields:
-          - { label: "Title", name: "title", widget: "hidden", default: "Data Analysis"}
+          - { label: "Title", name: "title", widget: "hidden", default: "Data Analysis" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
-          - {label: "Body", name: "body", widget: "markdown"}
+          - { label: "Body", name: "body", widget: "markdown" }
       - label: "Data Analysis"
         name: "data-analysis"
         file: "data-analysis.md"
         fields:
-          - { label: "Title", name: "title", widget: "hidden", default: "Data Analysis"}
+          - { label: "Title", name: "title", widget: "hidden", default: "Data Analysis" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
-          - {label: "Body", name: "body", widget: "markdown"}
+          - { label: "Body", name: "body", widget: "markdown" }
   - name: "authors"
     label: "Authors"
     folder: "_authors/"
@@ -34,11 +34,11 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Short Name", name: "author_id", widget: "string" }
+      - { label: "Short Name (used as identifier)", name: "author_id", widget: "string" }
       - { label: "Display Name", name: "display_name", widget: "string" }
-      - { label: "Contact email", name: "email", widget: "string" }
-      - { label: "Link to bio", name: "link_bio", widget: "string" }
-      - { label: "Bio", name: "bio", widget: "text" }
+      - { label: "Contact email", name: "email", widget: "string", required: false }
+      - { label: "Link to external bio", name: "link_bio", widget: "string", required: false }
+      - { label: "Short bio", name: "bio", widget: "text", required: false }
   - name: "topics"
     label: "Topics"
     folder: "_topics/"
@@ -57,9 +57,9 @@ collections:
     folder: "_campus-partnerships-planning"
     create: true
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Publishing Date", name: "date", widget: "datetime"}
-      - {label: "Title", name: "title", widget: "string"}
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Publishing Date", name: "date", widget: "datetime" }
+      - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Topic(s)",
           name: "article_topics",
@@ -68,8 +68,9 @@ collections:
           display_fields: [topic],
           search_fields: [topic],
           value_field: "topic_id",
+          required: false
         }
-      - { label: "Article summary", name: "summary", widget: "text" }
+      - { label: "Article summary", name: "summary", widget: "text", required: false }
       - {
           label: "Author",
           name: "author",
@@ -78,16 +79,17 @@ collections:
           display_fields: [display_name],
           search_fields: [display_name],
           value_field: "author_id",
+          required: false
         }
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "data-analysis"
     label: "Data Analysis"
     folder: "_data-analysis/"
     create: true
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Publishing Date", name: "date", widget: "datetime"}
-      - {label: "Title", name: "title", widget: "string"}
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Publishing Date", name: "date", widget: "datetime" }
+      - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Topic(s)",
           name: "article_topics",
@@ -96,8 +98,9 @@ collections:
           display_fields: [topic],
           search_fields: [topic],
           value_field: "topic_id",
+          required: false
         }
-      - { label: "Article summary", name: "summary", widget: "text" }
+      - { label: "Article summary", name: "summary", widget: "text", required: false }
       - {
           label: "Author",
           name: "author",
@@ -106,16 +109,17 @@ collections:
           display_fields: [display_name],
           search_fields: [display_name],
           value_field: "author_id",
+          required: false
         }
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "journal-cancellation-impact"
     label: "Journal Cancellation Impact"
     folder: "_journal-cancellation-impact/"
     create: true
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Publishing Date", name: "date", widget: "datetime"}
-      - {label: "Title", name: "title", widget: "string"}
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Publishing Date", name: "date", widget: "datetime" }
+      - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Topic(s)",
           name: "article_topics",
@@ -124,8 +128,9 @@ collections:
           display_fields: [topic],
           search_fields: [topic],
           value_field: "topic_id",
+          required: false
         }
-      - { label: "Article summary", name: "summary", widget: "text" }
+      - { label: "Article summary", name: "summary", widget: "text", required: false }
       - {
           label: "Author",
           name: "author",
@@ -134,16 +139,17 @@ collections:
           display_fields: [display_name],
           search_fields: [display_name],
           value_field: "author_id",
+          required: false
         }
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "reinvestments"
     label: "Reinvestments"
     folder: "_reinvestments/"
     create: true
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Publishing Date", name: "date", widget: "datetime"}
-      - {label: "Title", name: "title", widget: "string"}
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Publishing Date", name: "date", widget: "datetime" }
+      - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Topic(s)",
           name: "article_topics",
@@ -152,8 +158,9 @@ collections:
           display_fields: [topic],
           search_fields: [topic],
           value_field: "topic_id",
+          required: false
         }
-      - { label: "Article summary", name: "summary", widget: "text" }
+      - { label: "Article summary", name: "summary", widget: "text", required: false }
       - {
           label: "Author",
           name: "author",
@@ -162,5 +169,6 @@ collections:
           display_fields: [display_name],
           search_fields: [display_name],
           value_field: "author_id",
+          required: false
         }
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Body", name: "body", widget: "markdown" }
