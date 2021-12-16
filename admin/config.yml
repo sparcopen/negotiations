@@ -121,13 +121,14 @@ collections:
         }
       - { label: "Article summary", name: "summary", widget: "text", required: false }
       - {
-          label: "Author",
-          name: "author",
+          label: "Authors",
+          name: "authors",
           widget: "relation",
           collection: "authors",
+          multiple: true,
           display_fields: [display_name],
           search_fields: [display_name],
-          value_field: "display_name",
+          value_field: "author_id",
           required: false
         }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -152,10 +153,11 @@ collections:
         }
       - { label: "Article summary", name: "summary", widget: "text", required: false }
       - {
-          label: "Author",
-          name: "author",
+          label: "Authors",
+          name: "authors",
           widget: "relation",
           collection: "authors",
+          multiple: true,
           display_fields: [display_name],
           search_fields: [display_name],
           value_field: "author_id",
@@ -183,10 +185,11 @@ collections:
         }
       - { label: "Article summary", name: "summary", widget: "text", required: false }
       - {
-          label: "Author",
-          name: "author",
+          label: "Authors",
+          name: "authors",
           widget: "relation",
           collection: "authors",
+          multiple: true,
           display_fields: [display_name],
           search_fields: [display_name],
           value_field: "author_id",
