@@ -9,13 +9,9 @@
           <span class="sr-only">Return to homepage</span>
         </a>
         <p class="label">
-          {% if page.category %}
-          From the <em><a href="/{{ page.category }}">{{ page.category | replace: '-',' ' }}</a></em> report
-          {% else %}
           <time datetime="{{ page.date | date: '%F' }}">
             Published {{ page.date | date: "%b %e, %Y" }}
           </time>
-          {% endif %}
         </p>
         <h1>{{ page.title }}</h1>
         {% if page.author %}<p class="post__summary"><small><em>By</em> {{ page.author }}</small></p>{% endif %}
@@ -25,7 +21,7 @@
           {% if words < 360 %}
             <em>1 min read</em>
           {% else %}
-            <em>{{ words | divided_by:180 }} mins read</em>
+            <em>{{ words | divided_by:150 }} mins read</em>
           {% endif %}
         </p>
         <ul class="tags">

@@ -1,32 +1,24 @@
 <li class="toc__item">
   <article class="row">
     <header class="col col--group col--1of3">
-      <p class="label">
-        <time datetime="{{ post.date | date: '%F' }}">
-          {{ post.date | date: "%b %e, %Y" }}
-        </time>
-      </p>
+      <p class="label">{% include post-date.html %}</p>
       <h4>
         <a {% if post.link %}href="{{ post.link }}" target="_blank" rel="noopener"{% else %}href="{{ post.url }}"{% endif %} class="toc__link">
           {{ post.title }}{% if post.link %} {% include svg/arrow-northeast.svg %}{% endif %}
         </a>
       </h4>
-      <p class="metadata">
+    </header>
+    <div class="col col--group col--2of3">
+      {% if post.summary %}
+      <p>{{ post.summary }}</p>
+      {% endif %}
+      <p class="metadata label">
         {% if post.link %}
           {{ post.reading-time }}
         {% else %}
           {% include post-readtime.html %}
         {% endif %}
       </p>
-    </header>
-    <div class="col col--group col--2of3">
-      {% if post.summary %}
-      <p>{{ post.summary }}</p>
-      {% endif %}
-
-      {% if thread_type == "tags" and post.category %}
-      <p class="metadata">From the <a href="/{{ post.category }}">{{ post.category | replace: '-',' ' | upcase }}</a> report. <br/>Published on {% include post-date.html %}</p>
-      {% endif %}
     </div>
   </article>
 </li>

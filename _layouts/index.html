@@ -38,6 +38,11 @@
               <div class="col col--group col--1of3">
                 {% for post in site[item.name] limit:1 %}
                 <a href="{{ site.baseurl }}/{{ item.name }}/{{ post.slug }}" style="display: block;">
+                  <p class="label">
+                    <time datetime="{{ post.date | date: '%F' }}">
+                      {{ post.date | date: "%b %e, %Y" }}
+                    </time>
+                  </p>
                   <h4>{{ post.title }}</h4>
                   <p><em>By</em> {{ post.display_name }}</p>
                 </a>
