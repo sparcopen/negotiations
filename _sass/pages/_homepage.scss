@@ -23,11 +23,13 @@
 
   .button {
     margin-bottom: 0;
-    border-color: $white;
+    border-color: $black;
+    background-color: $black;
+    color: $white;
 
     &:hover, &:active, &:focus {
-      background-color: $black;
-      color: $white;
+      background-color: $white;
+      color: $black;
     }
   }
 
@@ -56,7 +58,7 @@
     margin-bottom: $spacing-03;
     padding: $spacing-04;
     background: $red url('../../media/pattern-red.png') repeat;
-    color: $black;
+    color: $white;
 
     @media (min-width: 768px) {
       margin-left: -2.5vw;
