@@ -37,8 +37,10 @@
               </header>
               <div class="col col--group col--1of3">
                 {% for post in site[item.name] limit:1 %}
-                <h4>{{ post.title }}</h4>
-                <p><em>By</em> {{ post.url }}</p>
+                <a href="{{ site.baseurl }}/{{ item.name }}/{{ post.slug }}" style="display: block;">
+                  <h4>{{ post.title }}</h4>
+                  <p><em>By</em> {{ post.display_name }}</p>
+                </a>
                 {% endfor %}
               </div>
             </article>
