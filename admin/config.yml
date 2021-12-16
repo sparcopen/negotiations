@@ -11,8 +11,9 @@ collections:
         name: "about"
         file: "about.md"
         fields:
-          - { label: "Title", name: "title", widget: "hidden", default: "about" }
+          - { label: "Title", name: "title", widget: "string", default: "About" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "about" }
+          - { label: "Body", name: "body", widget: "markdown" }
       - label: "Campus Partnerships Planning"
         name: "campus-partnerships-planning"
         file: "campus-partnerships-planning.md"
