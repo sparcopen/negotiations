@@ -10,10 +10,10 @@
           <span class="sr-only">Return to homepage</span>
         </a>
         <p class="label">
-          {% if page.name != 'blog.md' %}
-          Working Group
-          {% else %}
+          {% if page.name == 'blog.md' %}
           Recent Analysis
+          {% else %}
+          Working Group
           {% endif %}
         </p>
         <h1>{{ page.title }}</h1>

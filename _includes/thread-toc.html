@@ -4,7 +4,7 @@
 <li class="toc__item">
   <article class="row">
     <header class="col col--group col--1of3">
-      <p class="label">{% include post-date.html %}</p>
+      <p class="label"><small>{% include post-date.html %}</small></p>
       <h4>
         <a {% if post.link %}href="{{ post.link }}" target="_blank" rel="noopener"{% else %}href="{{ post.url }}"{% endif %} class="toc__link">
           {{ post.title }}{% if post.link %} {% include svg/arrow-northeast.svg %}{% endif %}
@@ -30,7 +30,7 @@
     </header>
     <div class="col col--group col--2of3">
       {% if post.summary %}
-      <p>{{ post.summary }}</p>
+      <p><small>{{ post.summary }}</small></p>
       {% endif %}
       <p class="metadata label">
         <small>

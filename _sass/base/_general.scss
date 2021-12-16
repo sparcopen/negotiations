@@ -2,10 +2,10 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 18px;
+  font-size: 20px;
 
   @media (min-width: 768px) {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -51,6 +51,11 @@ h6, small {
 
 p {
   margin: 0 0 $spacing-04 0;
+
+  small {
+    display: block;
+    line-height: 1.35;
+  }
 }
 
 ul, ol {

@@ -41,13 +41,6 @@
             <em>{{ words | divided_by:150 }} mins read</em>
           {% endif %}
         </p>
-        <ul class="tags">
-          {% for tag in page.topics %}
-          <li class="tag">
-            {{ tag }}
-          </li>
-          {% endfor %}
-        </ul>
       </header>
 
       <div class="col col--3of6 page-sidebar-content">
@@ -80,11 +73,10 @@
 
         {% include citation.html class="accordion__content" id="citationContent"%}
 
-        {% if page.article_topics.size > 0 %}
+        {% if page.topics.size > 0 %}
         <h2>Related</h2>
         <ul class="tags">
-        {{ page.article_topics }}
-          {% for tag in page.article_topics %}
+          {% for tag in page.topics %}
           <li class="tag"><a href="../{{ tag }}">{{ tag }}</a></li>
           {% endfor %}
         </ul>
