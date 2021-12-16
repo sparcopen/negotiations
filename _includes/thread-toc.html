@@ -1,5 +1,28 @@
 {% assign thread = page.url | remove: "/" | remove: ".html" %}
 
 {% for post in site[thread] %}
-  {% include post.html %}
+<li class="toc__item">
+  <article class="row">
+    <header class="col col--group col--1of3">
+      <p class="label">{% include post-date.html %}</p>
+      <h4>
+        <a {% if post.link %}href="{{ post.link }}" target="_blank" rel="noopener"{% else %}href="{{ post.url }}"{% endif %} class="toc__link">
+          {{ post.title }}{% if post.link %} {% include svg/arrow-northeast.svg %}{% endif %}
+        </a>
+      </h4>
+    </header>
+    <div class="col col--group col--2of3">
+      {% if post.summary %}
+      <p>{{ post.summary }}</p>
+      {% endif %}
+      <p class="metadata label">
+        {% if post.link %}
+          {{ post.reading-time }}
+        {% else %}
+          {% include post-readtime.html %}
+        {% endif %}
+      </p>
+    </div>
+  </article>
+</li>
 {% endfor %}
