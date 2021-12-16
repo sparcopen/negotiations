@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: sssoz/negotiations
+  repo: sparcopen/negotiations
   branch: master
 media_folder: "media/uploads"
 collections:
