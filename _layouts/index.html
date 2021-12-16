@@ -77,7 +77,7 @@
           <ol class="homepage__blog">
             {% for post in site.blog limit:4 %}
             <li>
-              <a href="{{ site.baseurl }}/blog/{{ post.url }}">
+              <a href="{{ site.baseurl }}/{{ post.url }}">
                 <article>
                   <time datetime="{{ post.date | date: '%F' }}">{{ post.date | date: "%b %e, %Y" }}</time>
                   <h3>{{ post.title }}</h3>
