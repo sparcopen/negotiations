@@ -10,9 +10,10 @@
           {{ post.title }}{% if post.link %} {% include svg/arrow-northeast.svg %}{% endif %}
         </a>
       </h4>
-      {% if post.authors %}
+      {% if post.authors or post.author %}
       <p class="metadata">
         <small>
+        {% if post.authors %}
           {% for author in post.authors %}
             {% if forloop.last %}
               {{ author }}
@@ -20,6 +21,9 @@
               {{ author }},
             {% endif %}
           {% endfor %}
+        {% elsif post.author %}
+          {{ post.author }}
+        {% endif %}
         </small>
       </p>
       {% endif %}

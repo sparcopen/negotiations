@@ -14,18 +14,22 @@
           </time>
         </p>
         <h1>{{ page.title }}</h1>
-        {% if page.authors %}
+        {% if page.authors or page.author %}
         <p class="post__summary">
           <small>
             <em class="font-serif">By</em>
-            {% for author in page.authors %}
-              {% if forloop.last %}
-                {{ author }}
-              {% else %}
-                {{ author }},
-              {% endif %}
-            {% endfor %}
-          </small>
+            {% if page.authors %}
+              {% for author in page.authors %}
+                {% if forloop.last %}
+                  {{ author }}
+                {% else %}
+                  {{ author }},
+                {% endif %}
+              {% endfor %}
+            {% elsif page.author %}
+              {{ page.author }}
+            {% endif %}
+            </small>
         </p>
         {% endif %}
         {% if page.summary %}<p class="post__summary">{{ page.summary }}</p>{% endif %}
