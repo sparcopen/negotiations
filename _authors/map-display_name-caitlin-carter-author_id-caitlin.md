@@ -1,4 +1,4 @@
 ---
 display_name: Caitlin Carter
-author_id: caitlin
+author_id: Caitlin Carter
 ---
