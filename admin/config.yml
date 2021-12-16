@@ -44,6 +44,7 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
   - name: "authors"
     label: "Authors"
+    label_singular: "Author"
     folder: "_authors/"
     create: true
     editor:
@@ -92,9 +93,9 @@ collections:
           widget: "relation",
           collection: "authors",
           multiple: true,
-          display_fields: ['author.*.display_name'],
-          search_fields: [author],
-          value_field: "author.*.author_id",
+          display_fields: [display_name],
+          search_fields: [display_name],
+          value_field: "author_id",
           required: false
         }
       - { label: "Body", name: "body", widget: "markdown" }
