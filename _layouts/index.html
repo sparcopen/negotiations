@@ -58,21 +58,11 @@
           <h2 class="label">By topic</h2>
         </header>
         <ul class="tags">
+          {% for tag in site.topics %}
           <li class="tag">
-            <a href="">Terms & conditions</a>
+            <a href="">{{ tag.topic }}</a>
           </li>
-
-          <li class="tag">
-            <a href="">Market consolidation</a>
-          </li>
-
-          <li class="tag">
-            <a href="">Responsible analytics</a>
-          </li>
-
-          <li class="tag">
-            <a href="">Data management</a>
-          </li>
+          {% endfor %}
         </ul>
       </section>
 

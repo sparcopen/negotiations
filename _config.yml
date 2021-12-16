@@ -41,6 +41,8 @@ collections:
     relative_directory: _reinvestments
     output: true
   topics:
+    relative_directory: _topics
     output: true
   blog:
+    relative_directory: _blog
     output: true
