@@ -37,14 +37,39 @@
     width: auto;
   }
 
-  .logo path:first-child,
+  .logo path:first-child {
+    fill: $white;
+  }
+
   .cc-icon path:last-child,
   .gh-icon path {
     fill: $black;
   }
 
   &__header {
+    margin-bottom: 2.5vw;
+    padding: $spacing-05;
+    background: $black;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    color: $white;
+    text-align: center;
     @include typescale-06;
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 768px) {
+      margin: 0 -2.5vw 2.5vw -2.5vw;
+    }
+  }
+
+  &__logo {
+    margin-bottom: $spacing-04;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__header--bg {
@@ -63,7 +88,7 @@
   }
 
   &__header--line {
-    margin-bottom: $spacing-04;
+    margin-bottom: $spacing-05;
     background: linear-gradient($white 0%, $white 49%, $black 50%, $black 51%, $white 52%, $white 100%);
     text-align: center;
 
@@ -82,11 +107,11 @@
 
     header {
       margin-bottom: $spacing-03;
-      background: $black;
-      color: $white;
+      background: $light-grey;
+      color: $black;
 
       a {
-        color: $white;
+        color: $black;
       }
 
       @media (min-width: 768px) {
@@ -96,6 +121,7 @@
 
     h3 {
       padding: $spacing-04;
+      width: 66.6666%
     }
 
     h4 {
