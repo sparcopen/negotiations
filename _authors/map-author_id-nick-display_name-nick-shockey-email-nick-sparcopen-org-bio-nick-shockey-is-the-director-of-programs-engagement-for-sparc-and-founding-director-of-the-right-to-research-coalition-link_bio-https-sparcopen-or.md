@@ -1,5 +1,5 @@
 ---
-author_id: nick
+author_id: Nick Shockey
 display_name: Nick Shockey
 email: nick@sparcopen.org
 link_bio: https://sparcopen.org/people/nick-shockey/
