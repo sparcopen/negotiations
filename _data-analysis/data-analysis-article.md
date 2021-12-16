@@ -2,8 +2,13 @@
 layout: post
 date: 2021-12-16T15:14:26.390Z
 title: Data Analysis Article
-article_topics: topic
-summary: Blab
+topics:
+  - "New Test Topic "
+  - "Test Topic "
+summary: A shorter blab
+authors:
+  - Caitlin Carter
 author: Nick Shockey
+article_topics: topic
 ---
-Blab
+A very long blab with **Markdown.** Lorem ipsum dolor sit amet.
