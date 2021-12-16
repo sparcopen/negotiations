@@ -49,17 +49,11 @@ collections:
     editor:
       preview: false
     fields:
-      - label: 'Author'
-        name: 'author'
-        label_singular: 'Author'
-        identifier_field: author_id
-        widget: 'list'
-        fields:
-          - { label: "Short Name (used as identifier)", name: "author_id", widget: "string" }
-          - { label: "Display Name", name: "display_name", widget: "string" }
-          - { label: "Contact email", name: "email", widget: "string", required: false }
-          - { label: "Link to external bio", name: "link_bio", widget: "string", required: false }
-          - { label: "Short bio", name: "bio", widget: "text", required: false }
+      - { label: "Short Name (used as identifier)", name: "author_id", widget: "string" }
+      - { label: "Display Name", name: "display_name", widget: "string" }
+      - { label: "Contact email", name: "email", widget: "string", required: false }
+      - { label: "Link to external bio", name: "link_bio", widget: "string", required: false }
+      - { label: "Short bio", name: "bio", widget: "text", required: false }
   - name: "topics"
     label: "Topics"
     folder: "_topics/"
