@@ -5,6 +5,10 @@
     padding-top: $spacing-04;
     border-top: 5px solid $black;
 
+    a {
+      color: $black;
+    }
+
     > p {
 
       &:first-of-type {
