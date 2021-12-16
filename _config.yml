@@ -28,18 +28,17 @@ plugins:
   - jekyll-sitemap
 
 collections:
-  campus_partnerships_planning:
-    permalink: "/:collection/:path/"
+  campus-partnerships-planning:
+    relative_directory: _campus-partnerships-planning
     output: true
-  data_analysis:
-    permalink: "/:collection/:path/"
+  data-analysis:
+    relative_directory: _data-analysis
     output: true
-  journal_cancellation_impact:
-    permalink: "/:collection/:path/"
+  journal-cancellation-impact:
+    relative_directory: _journal-cancellation-impact
     output: true
   reinvestments:
-    permalink: "/:collection/:path/"
+    relative_directory: _reinvestments
     output: true
   topics:
-    permalink: "/:collection/:path/"
     output: true
