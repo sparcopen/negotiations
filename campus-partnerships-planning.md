@@ -7,4 +7,3 @@ The Campus Partnerships and Planning Working Group examines engagement strategie
 * Intra-library collaboration among deans/directors, electronic resources, collections and acquisitions, interlibrary loan, and scholarly communication librarians
 * Engagement with university administrators 
 * Collaboration with faculty to align on negotiation goals and strategies
-* Blab
