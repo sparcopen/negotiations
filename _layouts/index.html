@@ -17,7 +17,7 @@
         </header>
         <div class="col col--1of2">
           <p>{{ page.about_text }}</p>
-          <a href="{{ site.baseurl }}/about" class="button">More about us</a>
+          <a href="{{ site.BASE_PATH }}/about" class="button">More about us</a>
         </div>
       </section>
 
@@ -30,14 +30,14 @@
           {% if item.working_group %}
             <article class="row homepage__group">
               <header class="col col--group col--2of3 row">
-                <a href="{{ site.baseurl }}/{{ item.name }}" class="col col--group col--1of2" style="display: block;">
+                <a href="{{ site.BASE_PATH }}/{{ item.name }}" class="col col--group col--1of2" style="display: block;">
                   <h3>{{ item.label }}</h3>
                 </a>
                   <img src="../media/wg/{{ item.cover_img }}" alt="" class="col col--group col--1of2"/>
               </header>
               <div class="col col--group col--1of3">
                 {% for post in site[item.name] limit:1 %}
-                <a href="{{ site.baseurl }}/{{ item.name }}/{{ post.slug }}" style="display: block;">
+                <a href="{{ site.BASE_PATH }}/{{ item.name }}/{{ post.slug }}" style="display: block;">
                   <p class="label">
                     <time datetime="{{ post.date | date: '%F' }}">
                       {{ post.date | date: "%b %e, %Y" }}
@@ -71,13 +71,13 @@
         <header class="col col--1of2 homepage__header--bg">
           <h2>Recent analysis</h2>
           <p>{{ page.blog_text }}</p>
-          <a href="{{ site.baseurl }}/blog" class="button">See the blog</a>
+          <a href="{{ site.BASE_PATH }}/blog" class="button">See the blog</a>
         </header>
         <div class="col col--1of2">
           <ol class="homepage__blog">
             {% for post in site.blog limit:4 %}
             <li>
-              <a href="{{ site.baseurl }}/{{ post.url }}" class="label">
+              <a href="{{ site.BASE_PATH }}/{{ post.url }}" class="label">
                 <article>
                   <time datetime="{{ post.date | date: '%F' }}">{{ post.date | date: "%b %e, %Y" }}</time>
                   <h3>{{ post.title }}</h3>
