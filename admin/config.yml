@@ -1,6 +1,5 @@
 backend:
   name: git-gateway
-  repo: sparcopen/negotiations
   branch: master
 media_folder: "media/uploads"
 collections:
@@ -56,7 +55,7 @@ collections:
       - { label: "Topic (full name)", name: "topic", widget: "string" }
   - name: "campus-partnerships-planning"
     label: "Campus Partnerships Planning"
-    folder: "_campus-partnerships-planning/"
+    folder: "_campus-partnerships-planning"
     create: true
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
