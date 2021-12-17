@@ -47,7 +47,7 @@
   }
 
   &__header {
-    margin-bottom: 2.5vw;
+    margin-bottom: 0;
     padding: $spacing-05;
     background: $black;
     border-top: 1px solid $black;
@@ -61,7 +61,7 @@
     }
 
     @media (min-width: 768px) {
-      margin: -2.5vw -2.5vw 2.5vw -2.5vw;
+      margin: -2.5vw -2.5vw 0 -2.5vw;
     }
   }
 
@@ -80,6 +80,7 @@
 
     @media (min-width: 768px) {
       margin-left: -2.5vw;
+      margin-right: -2.5vw;
     }
 
     h2 {
