@@ -38,11 +38,11 @@ Sample Survey to Subject Liaisons:
 
 * What specific disciplines does this resource support?
 * Is this resource used by your faculty for research, teaching & learning, both?
-* * Please describe
+  * Please describe
 * Is this resource used in specific courses? Yes or No
-* * Please list the courses
+  * Please list the courses
 * Do you use this resource within your library instruction?
-* * Synchronous class sessions (in-person or online)
+  * Synchronous class sessions (in-person or online)
   * Asynchronous instruction 
   * Incorporated into LibGuides
   * Incorporated into learning objects (e.g., videos, tutorials)
