@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: master
   repo: sparcopen/negotiations
+publish_mode: editorial_workflow
 media_folder: "media/uploads"
 collections:
   - name: "pages"
