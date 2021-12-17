@@ -4,7 +4,10 @@ date: 2021-12-17T00:41:22.128Z
 title: A more recent article
 topics:
   - "New Test Topic "
-summary: ""
+summary: Vestibulum vehicula sit amet tortor quis eleifend. Curabitur sagittis
+  massa ac augue dapibus efficitur. Cras vitae lacinia quam. Curabitur placerat
+  iaculis ex at mattis. Integer libero eros, malesuada vitae egestas quis,
+  blandit facilisis nulla.
 authors:
   - Caitlin Carter
 ---
