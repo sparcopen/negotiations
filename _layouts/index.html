@@ -68,7 +68,7 @@
                     </p>
                     {% endif %}
                   </a>
-                  <p>{{ post.summary | truncatewords: 25 }}</p>
+                  <p><small>{{ post.summary | truncatewords: 25 }}</small></p>
                   {% endfor %}
                 {% else %}
                   <p class="font-serif">No articles published yet.</p>

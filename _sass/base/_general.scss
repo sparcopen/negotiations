@@ -52,7 +52,7 @@ h6, small {
 p {
   margin: 0 0 $spacing-04 0;
 
-  small {
+  > small {
     display: block;
     line-height: 1.35;
   }
