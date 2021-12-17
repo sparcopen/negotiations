@@ -22,18 +22,18 @@
 
   .button {
     margin-bottom: 0;
-    border-color: $black;
-    background-color: $black;
-    color: $white;
+    border-color: $white;
+    background-color: $white;
+    color: $black;
 
     &:hover, &:active, &:focus {
       background-color: transparent;
-      color: $black;
+      color: $white;
     }
   }
 
   .logo {
-    height: 30px;
+    height: 15px;
     width: auto;
   }
 
@@ -47,29 +47,24 @@
   }
 
   &__header {
-    margin-bottom: 0;
-    padding: $spacing-05;
+    margin: -2.5vw -2.5vw 2.5vw -2.5vw;
+    padding: $spacing-05 0;
     background: $black;
     border-top: 1px solid $black;
     border-bottom: 1px solid $black;
     color: $white;
-    text-align: center;
     @include typescale-06;
 
     h1 {
-      margin-bottom: 0;
-    }
-
-    @media (min-width: 768px) {
-      margin: -2.5vw -2.5vw 0 -2.5vw;
+      margin-bottom: $spacing-04;
     }
   }
 
   &__logo {
     margin-bottom: $spacing-04;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   &__header--bg {
@@ -80,7 +75,6 @@
 
     @media (min-width: 768px) {
       margin-left: -2.5vw;
-      margin-right: -2.5vw;
     }
 
     h2 {
