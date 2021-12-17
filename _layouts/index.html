@@ -30,10 +30,12 @@
           {% if item.working_group %}
             <article class="row homepage__group">
               <header class="col col--group col--2of3 row">
-                <a href="{{ site.BASE_PATH }}/{{ item.name }}" class="col col--group col--1of2" style="display: block;">
+                <a href="{{ site.BASE_PATH }}/{{ item.name }}" class="col col--group col--1of2 homepage__group-label">
                   <h3>{{ item.label }}</h3>
                 </a>
-                  <img src="../media/wg/{{ item.cover_img }}" alt="" class="col col--group col--1of2"/>
+                <div class="col col--group col--1of2">
+                  <div class="homepage__group-bg" style="background-image: url('../media/wg/{{ item.cover_img }}')"></div>
+                </div>
               </header>
               <div class="col col--group col--1of3">
                 {% for post in site[item.name] limit:1 %}

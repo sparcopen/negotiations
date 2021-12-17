@@ -102,7 +102,7 @@
   &__group {
     margin-bottom: $spacing-06;
     width: 100%;
-    min-height: 20vh;
+    min-height: 33vh;
     justify-content: space-between;
 
     header {
@@ -141,6 +141,21 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  &__group-label {
+    display: block;
+
+    &:hover, &:active, &:focus {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  &__group-bg {
+    min-height: 33vh;
+    background-position: center;
+    background-size: cover;
   }
 
   &__blog {
