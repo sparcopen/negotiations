@@ -123,16 +123,6 @@
       @include font-serif;
     }
 
-    &:nth-of-type(odd) {
-      @media (min-width: 768px) {
-        flex-direction: row-reverse;
-
-        header {
-            margin-right: -2.5vw;
-        }
-      }
-    }
-
     &:last-child {
       margin-bottom: 0;
     }
@@ -142,7 +132,7 @@
     display: block;
 
     &:hover, &:active, &:focus {
-      background-color: $black;
+      background-color: $red;
       color: $white;
     }
   }
