@@ -1,6 +1,7 @@
 {% assign thread = page.url | remove: "/" | remove: ".html" %}
+{% assign posts = site[thread] | reverse %}
 
-{% for post in site[thread] %}
+{% for post in posts %}
 <li class="toc__item">
   <article class="row">
     <header class="col col--group col--1of3">
