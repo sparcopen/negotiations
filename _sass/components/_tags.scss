@@ -3,14 +3,20 @@
   padding: $spacing-02 $spacing-02 $spacing-02 0;
 }
 
-.tag a {
-  margin: 0 $spacing-03 $spacing-03 0;
-  padding: $spacing-02 $spacing-03;
-  border-radius: 9999px;
-  text-decoration: none;
-  background-color: $black;
-  color: $white;
-  line-height: 2.5;
-  @include font-sans;
-  @include typescale-06;
+.tag {
+  a {
+    margin: 0 $spacing-03 $spacing-03 0;
+    padding: $spacing-02 $spacing-03;
+    border-radius: 9999px;
+    text-decoration: none;
+    background-color: $black;
+    color: $white;
+    line-height: 2.5;
+    @include font-sans;
+    @include typescale-06;
+  }
+
+  &:last-of-type a {
+    margin-right: 0;
+  }
 }

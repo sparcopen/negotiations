@@ -39,7 +39,7 @@
                 {% if site[item.name].size > 0 %}
                   {% assign posts = site[item.name] | reverse %}
                   {% for post in posts limit:1 %}
-                  <a href="{{ site.BASE_PATH }}/{{ item.name }}/{{ post.slug }}" style="display: block;">
+                  <a href="{{ site.BASE_PATH }}/{{ item.name }}/{{ post.slug }}" class="homepage__group-latest">
                     <p class="label">
                       <small>
                         Latest published on

@@ -102,6 +102,7 @@
 
     header {
       margin-bottom: $spacing-03;
+      border: 1px solid;
       background: rgba($light-grey, .75);
       color: $black;
 
@@ -110,7 +111,12 @@
       }
 
       @media (min-width: 768px) {
+        margin-bottom: 0;
         margin-left: -2.5vw;
+
+        header {
+          border-left: 0;
+        }
       }
     }
 
@@ -141,6 +147,12 @@
     min-height: 33vh;
     background-position: center;
     background-size: cover;
+  }
+
+  &__group-latest {
+    display: block;
+    padding-top: $spacing-04;
+    border-top: 5px solid;
   }
 
   &__blog {
