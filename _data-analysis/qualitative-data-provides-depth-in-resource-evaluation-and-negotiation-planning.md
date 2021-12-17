@@ -38,10 +38,13 @@ Sample Survey to Subject Liaisons:
 
 * What specific disciplines does this resource support?
 * Is this resource used by your faculty for research, teaching & learning, both?
+
   * Please describe
 * Is this resource used in specific courses? Yes or No
+
   * Please list the courses
 * Do you use this resource within your library instruction?
+
   * Synchronous class sessions (in-person or online)
   * Asynchronous instruction 
   * Incorporated into LibGuides
@@ -67,16 +70,13 @@ Another key piece of qualitative data that will be integrated into a future iter
 
 Below is a decision matrix for librarian/faculty response (qualitative) versus use data (quantitative).
 
-Quantitative–Qualitative Cancellation Decision Matrix
+**Quantitative–Qualitative Cancellation Decision Matrix=**
 
-|     |     |     |
-| --- | --- | --- |
-|     |     |     |
-|     |     |     |
-|     |     |     |
-|     |     |     |
-
-
+|          | **Librarian/Faculty Response**                                                                                                                                                                                                                                                           |                                                                                                                                              |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+|          | Indicated necessary                                                                                                                                                                                                                                                                      | Not mentioned                                                                                                                                |
+| High Use | Subscribe, encourage publishing the articles as open if an option (e.g., provide APC grants, deposit in institutional repositories).                                                                                                                                                     | Educate faculty on resources that are being used, informing research and/or teaching.  Positive outreach opportunity for subject librarians. |
+| Low Use  | May be due to prestige.  Change management/ communication strategy needed to help faculty let go of the resource and to find alternative access.  Pursue avenues such as on-demand access and cancel if $/use is higher than cost of on-demand access or ILL, depending on level of cut. | Cancel if $/use is higher than cost to get via ILL.                                                                                          |
 
 ## Okay, use is low, but librarians/faculty indicate they think it’s necessary...
 
@@ -84,20 +84,14 @@ It is time to explore opportunities for alternative access. Alternative access i
 
 To reveal alternative-access options, consider doing an overlap analysis, and analysing open access availability of historically used journals. If you offer an on-demand access mechanism such as the [Get It Now](http://www.copyright.com/academia/get-it-now/) service, explore the cost of switching.
 
-
-
 ## References
 
 German, E., & Hartnett, E. (2017). Disability inclusion and library collections: Initiatives for greater access for all. In K. P. Strauch, B. R. Bernhardt, L. H. Hinds, & L. Meyer (Eds.), What’s Past is Prologue: Charleston Conference Proceedings, 2017 (pp. 205–210). <http://doi.org/10.5703/1288284316671>
 
-
 Macy, K. V. (2018). Information creates relative bargaining power in vendor negotiations. The Bottom Line, 31(2), 137–149. <https://doi.org/10.1108/BL-12-2017-0033>
-
 
 Macy, K. V., & Baich, T. (2019, March 3–6). Holistic e-resource analysis to support changing acquisition models \[Conference presentation]. Electronic Resources & Libraries Conference, Austin, TX, United States. <http://hdl.handle.net/1805/18524>
 
-
 Nisonger, T. E. (2008). The “80/20 rule” and core journals. Serials Librarian, 55(1/2), 62–84, <https://doi.org/10.1080/03615260801970774>
-
 
 Porter, M. E. (2008). The five competitive forces that shape strategy, Harvard Business Review, 86(1), 78–93. <https://hbr.org/2008/01/the-five-competitive-forces-that-shape-strategy>
