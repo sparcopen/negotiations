@@ -2,6 +2,8 @@
 layout: post
 date: 2021-05-19T13:11:25.827Z
 title: Qualitative Data Provides Depth in Resource Evaluation and Negotiation Planning
+authors:
+  - Katharine Macy
 ---
 # Why we need both quantitative and qualitative data
 
