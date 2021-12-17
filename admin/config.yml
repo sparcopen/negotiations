@@ -65,6 +65,7 @@ collections:
     editor:
       preview: false
     fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
       - { label: "Topic", name: "topic", widget: "string" }
   - name: "campus-partnerships-planning"
     label: "Campus Partnerships Planning"
