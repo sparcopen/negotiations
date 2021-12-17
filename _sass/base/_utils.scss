@@ -12,6 +12,10 @@
   }
 }
 
+.font-sans {
+  @include font-sans;
+}
+
 .font-serif {
   @include font-serif;
 }

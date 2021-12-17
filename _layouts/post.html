@@ -14,8 +14,13 @@
           </time>
         </p>
         <h1>{{ page.title }}</h1>
+        <p>
+          <small class="font-sans">From the
+          <a href="{{ site.BASE_PATH }}/{{ page.collection }}"><span class="label">{% include wg_full_name.html %}</span></a>
+          working group</small>
+        </p>
         {% if page.authors or page.author %}
-        <p class="post__summary">
+        <p class="font-sans">
           <small>
             <em class="font-serif">By</em>
             {% if page.authors %}
@@ -29,18 +34,9 @@
             {% elsif page.author %}
               {{ page.author }}
             {% endif %}
-            </small>
+          </small>
         </p>
         {% endif %}
-        {% if page.summary %}<p class="post__summary">{{ page.summary }}</p>{% endif %}
-        <p class="post__read-time">
-          {% assign words = page.content | number_of_words %}
-          {% if words < 360 %}
-            <em>1 min read</em>
-          {% else %}
-            <em>{{ words | divided_by:150 }} mins read</em>
-          {% endif %}
-        </p>
       </header>
 
       <div class="col col--3of6 page-sidebar-content">
@@ -56,6 +52,17 @@
       </div>
 
       <aside class="col col--1of6 page-sidebar-aside">
+        <p class="font-sans">
+          <small>
+          {% assign words = page.content | number_of_words %}
+          {% if words < 360 %}
+            1 min read
+          {% else %}
+            {{ words | divided_by:150 }} mins read
+          {% endif %}
+          </small>
+        </p>
+
         <p class="button-group">
           {% if page.pdf %}
             <a href="{{ page.pdf }}" class="button" download>Download</a>
