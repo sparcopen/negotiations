@@ -28,42 +28,49 @@
           {% if item.working_group %}
             <article class="row homepage__group">
               <header class="col col--group col--2of3 row">
-                <a href="{{ site.BASE_PATH }}/{{ item.name }}" class="col col--group col--1of2 homepage__group-label">
-                  <h3>{{ item.label }}</h3>
-                </a>
                 <div class="col col--group col--1of2">
                   <div class="homepage__group-bg" style="background-image: url('../media/wg/{{ item.cover_img }}')"></div>
                 </div>
+                <a href="{{ site.BASE_PATH }}/{{ item.name }}" class="col col--group col--1of2 homepage__group-label">
+                  <h3>{{ item.label }}</h3>
+                </a>
               </header>
               <div class="col col--group col--1of3">
-                {% for post in site[item.name] limit:1 %}
-                <a href="{{ site.BASE_PATH }}/{{ item.name }}/{{ post.slug }}" style="display: block;">
-                  <p class="label">
-                    <time datetime="{{ post.date | date: '%F' }}">
-                      {{ post.date | date: "%b %e, %Y" }}
-                    </time>
-                  </p>
-                  <h4>{{ post.title }}</h4>
-                  {% if post.authors or post.author %}
-                  <p>
-                    <small>
-                    <em class="font-serif">By</em>
-                    {% if post.authors %}
-                      {% for author in post.authors %}
-                        {% if forloop.last %}
-                          {{ author }}
-                        {% else %}
-                          {{ author }},
-                        {% endif %}
-                      {% endfor %}
-                    {% elsif post.author %}
-                      {{ post.author }}
+                {% if site[item.name].size > 0 %}
+                  {% for post in site[item.name] limit:1 %}
+                  <a href="{{ site.BASE_PATH }}/{{ item.name }}/{{ post.slug }}" style="display: block;">
+                    <p class="label">
+                      <small>
+                        Latest published on
+                        <time datetime="{{ post.date | date: '%F' }}">
+                          {{ post.date | date: "%b %e, %Y" }}
+                        </time>
+                      </small>
+                    </p>
+                    <h4>{{ post.title }}</h4>
+                    {% if post.authors or post.author %}
+                    <p>
+                      <small>
+                      <em class="font-serif">By</em>
+                      {% if post.authors %}
+                        {% for author in post.authors %}
+                          {% if forloop.last %}
+                            {{ author }}
+                          {% else %}
+                            {{ author }},
+                          {% endif %}
+                        {% endfor %}
+                      {% elsif post.author %}
+                        {{ post.author }}
+                      {% endif %}
+                      </small>
+                    </p>
                     {% endif %}
-                    </small>
-                  </p>
-                  {% endif %}
-                </a>
-                {% endfor %}
+                  </a>
+                  {% endfor %}
+                {% else %}
+                  <p class="font-serif">No articles published yet.</p>
+                {% endif %}
               </div>
             </article>
           {% endif %}
