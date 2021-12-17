@@ -53,6 +53,7 @@ collections:
       preview: false
     fields:
       - { label: "Display Name", name: "display_name", widget: "string" }
+      - { label: "Affiliation", name: "affiliation", widget: "string", required: false }
       - { label: "Contact email", name: "email", widget: "string", required: false }
       - { label: "Link to external bio", name: "link_bio", widget: "string", required: false }
       - { label: "Short bio", name: "bio", widget: "text", required: false }
