@@ -85,7 +85,7 @@
         <ul class="tags">
           {% for tag in site.topics %}
           <li class="tag">
-            <a href="">{{ tag.topic }}</a>
+            <a href="{{ site.BASE_PATH }}/topics/map-topic-{{ tag.topic | slugify }}">{{ tag.topic }}</a>
           </li>
           {% endfor %}
         </ul>
