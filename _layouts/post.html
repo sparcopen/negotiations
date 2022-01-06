@@ -60,7 +60,6 @@
       </div>
 
       <aside class="col col--1of6 page-sidebar-aside">
-        <button id="printButton" class="button" onClick="window.print()">Print</button>
         {% comment %}
         <p class="button-group">
           <a href="#citationContent" class="button accordion-toggle">Cite</a>
@@ -69,13 +68,16 @@
         {% endcomment %}
 
         {% if page.topics.size > 0 %}
-        <h2>Related</h2>
+        <h2 class="label">Tags</h2>
         <ul class="tags">
           {% for tag in page.topics %}
           <li class="tag"><a href="../{{ tag }}">{{ tag }}</a></li>
           {% endfor %}
         </ul>
         {% endif %}
+        <p>
+          <button id="printButton" class="button" onClick="window.print()">Print</button>
+        </p>
 
       </aside>
 
