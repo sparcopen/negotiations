@@ -120,11 +120,6 @@
       }
     }
 
-    h3 {
-      padding: $spacing-04;
-      width: 66.6666%
-    }
-
     h4 {
       @include font-serif;
     }
@@ -135,7 +130,19 @@
   }
 
   &__group-label {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $spacing-03;
+
+    h3 {
+      width: 66.6666%
+    }
+
+    p {
+      margin-bottom: 0;
+      font-size: small;
+    }
 
     &:hover, &:active, &:focus {
       background-color: $red;
@@ -145,6 +152,7 @@
 
   &__group-bg {
     min-height: 33vh;
+    height: 100%;
     background-position: center;
     background-size: cover;
   }
