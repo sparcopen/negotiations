@@ -21,7 +21,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Campus Partnerships Planning" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
-          - { label: "Featured image", name: "thumbnail", widget: "image", default: "../media/wg/campus-partnerships.jpg" }
+          - { label: "Featured image", name: "cover_img", widget: "image", default: "/media/uploads/campus-partnerships.jpg" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Data Analysis"
         name: "data-analysis"
@@ -29,7 +29,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Data Analysis" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
-          - { label: "Featured image", name: "thumbnail", widget: "image", default: "../media/wg/data-analysis.jpg" }
+          - { label: "Featured image", name: "cover_img", widget: "image", default: "/media/uploads/data-analysis.jpg" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Journal Cancellation Impact"
         name: "journal-cancellation-impact"
@@ -37,7 +37,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Journal Cancellation Impact" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
-          - { label: "Featured image", name: "thumbnail", widget: "image", default: "../media/wg/journal-cancellation.jpg" }
+          - { label: "Featured image", name: "cover_img", widget: "image", default: "/media/uploads/journal-cancellation.jpg" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Reinvestments"
         name: "reinvestments"
@@ -45,7 +45,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Reinvestments" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
-          - { label: "Featured image", name: "thumbnail", widget: "image", default: "../media/wg/reinvestments.jpg" }
+          - { label: "Featured image", name: "cover_img", widget: "image", default: "/media/uploads/reinvestments.jpg" }
           - { label: "Body", name: "body", widget: "markdown" }
   - name: "authors"
     label: "Authors"

@@ -1,7 +1,7 @@
 ---
 title: Data Analysis
 layout: thread
-thumbnail: /media/uploads/data-analysis.jpg
+cover_img: /media/uploads/data-analysis.jpg
 ---
 The Data Analysis Working Group examines existing and novel data assessment
 

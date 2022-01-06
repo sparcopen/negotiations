@@ -1,7 +1,7 @@
 ---
 title: Journal Cancellation Impact
 layout: thread
-thumbnail: /media/uploads/journal-cancellation.jpg
+cover_img: /media/uploads/journal-cancellation.jpg
 ---
 The Journal Cancellation Impact Working Group examines what happens at an
 
