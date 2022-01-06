@@ -22,6 +22,7 @@ author:
   facebook: sparcopen
 
 BASE_PATH: https://negotiations.sparcopen.org
+url: https://negotiations.sparcopen.org # keep this for sitemap 
 plugins:
   - jekyll-sitemap
 
