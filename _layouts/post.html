@@ -14,9 +14,17 @@
           </time>
         </p>
         <h1>{{ page.title }}</h1>
-        <p>
+        <p class="font-sans">
+          <small>
+          {% assign words = page.content | number_of_words %}
+          {% if words < 360 %}
+            1 min read
+          {% else %}
+            {{ words | divided_by:150 }} mins read
+          {% endif %}
+          </small>
           <small class="font-sans">From the
-          <a href="{{ site.BASE_PATH }}/{{ page.collection }}">{% include wg_full_name.html %}</a>
+          <a href="{{ site.BASE_PATH }}/{{ page.collection }}">{%- include wg_full_name.html -%}</a>
           working group</small>
         </p>
         {% if page.authors or page.author %}
@@ -52,18 +60,10 @@
       </div>
 
       <aside class="col col--1of6 page-sidebar-aside">
-        <p class="font-sans">
-          <small>
-          {% assign words = page.content | number_of_words %}
-          {% if words < 360 %}
-            1 min read
-          {% else %}
-            {{ words | divided_by:150 }} mins read
-          {% endif %}
-          </small>
-        </p>
 
         <p class="button-group">
+
+        {% comment %}
           {% if page.pdf %}
             <a href="{{ page.pdf }}" class="button" download>Download</a>
           {% else %}
@@ -76,9 +76,8 @@
           <a href="#citationContent" class="button accordion-toggle">Cite</a>
           {% endif %}
         </p>
-
-
         {% include citation.html class="accordion__content" id="citationContent"%}
+        {% endcomment %}
 
         {% if page.topics.size > 0 %}
         <h2>Related</h2>
