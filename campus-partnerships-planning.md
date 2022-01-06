@@ -1,6 +1,7 @@
 ---
 title: Campus Partnerships Planning
 layout: thread
+thumbnail: /media/uploads/campus-partnerships.jpg
 ---
 The Campus Partnerships and Planning Working Group examines engagement strategies, partnerships, and other structures that can be helpful in negotiating journal subscriptions. Support structures in this context include:
 
