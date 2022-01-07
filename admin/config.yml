@@ -100,7 +100,7 @@ collections:
           widget: "relation",
           collection: "authors",
           multiple: true,
-          display_fields: ["display_name", "affiliation", "email", "bio", "link_bio"],
+          display_fields: [display_name],
           search_fields: [display_name],
           value_field: "display_name",
           required: false
