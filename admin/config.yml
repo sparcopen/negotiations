@@ -67,12 +67,12 @@ collections:
     widget: "list"
     allow_add: true
     create: true
+    slug: "/tags/{{slug}}"
     editor:
       preview: false
     fields:
       - { label: "Topic", name: "topic", widget: "string" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
-      - { label: "Permalink", name: "permalink", widget: "hidden", default: "/tags/{{ topic }}" }
   - name: "campus-partnerships-planning"
     label: "Campus Partnerships Planning"
     label_singular: "post"
@@ -90,7 +90,7 @@ collections:
           multiple: true,
           display_fields: [topic],
           search_fields: [topic],
-          value_field: "topic",
+          value_field: "{{ slug }}",
           required: false
         }
       - { label: "Article summary", name: "summary", widget: "text", required: false }
@@ -102,7 +102,7 @@ collections:
           multiple: true,
           display_fields: ["display_name", "affiliation", "email", "bio", "link_bio"],
           search_fields: [display_name],
-          value_field: "{{ slug }}",
+          value_field: "display_name",
           required: false
         }
       - { label: "Body", name: "body", widget: "markdown" }
