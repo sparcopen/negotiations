@@ -90,7 +90,7 @@ collections:
           multiple: true,
           display_fields: [topic],
           search_fields: [topic],
-          value_field: "{{ slug }}",
+          value_field: "topic",
           required: false
         }
       - { label: "Article summary", name: "summary", widget: "text", required: false }
