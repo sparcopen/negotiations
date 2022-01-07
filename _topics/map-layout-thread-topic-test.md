@@ -1,4 +1,0 @@
----
-topic: Test
-layout: thread
----
