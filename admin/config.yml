@@ -102,7 +102,8 @@ collections:
           widget: "relation",
           collection: "authors",
           multiple: true,
-          display_fields: [display_name, email],
+          slug: "{{slug}}",
+          display_fields: [display_name],
           search_fields: [display_name],
           value_field: "display_name",
           required: false
