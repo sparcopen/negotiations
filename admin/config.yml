@@ -81,7 +81,7 @@ collections:
   - name: "campus-partnerships-planning"
     label: "Campus Partnerships Planning"
     label_singular: "post"
-    folder: "_campus-partnerships-planning"
+    folder: "_campus-partnerships-planning/"
     create: true
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
