@@ -52,6 +52,15 @@
         {% include members-box.html %}
         {% endif %}
 
+        {% if page.topics.size > 0 %}
+        <h2 class="sr-only">Tags</h2>
+        <ul class="tags" style="text-align: right;">
+          {% for tag in page.topics %}
+          <li class="tag"><a href="../{{ tag }}"><small>{{ tag }}</small></a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
         <article class="page-content">
           {{ page.content | markdownify }}
         </article>
@@ -67,14 +76,6 @@
         {% include citation.html class="accordion__content" id="citationContent"%}
         {% endcomment %}
 
-        {% if page.topics.size > 0 %}
-        <h2 class="label">Tags</h2>
-        <ul class="tags">
-          {% for tag in page.topics %}
-          <li class="tag"><a href="../{{ tag }}">{{ tag }}</a></li>
-          {% endfor %}
-        </ul>
-        {% endif %}
         <p>
           <button id="printButton" class="button" onClick="window.print()">Print</button>
         </p>

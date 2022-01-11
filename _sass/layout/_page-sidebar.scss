@@ -38,6 +38,8 @@
 }
 
 .page-sidebar-content {
+  margin-top: $spacing-03;
+
   @media (min-width: 1200px) {
     margin-left: 33.3333333%;
   }
