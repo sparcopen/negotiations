@@ -67,6 +67,7 @@ collections:
   - name: "topics"
     label: "Topics"
     label_singular: "Topic"
+    identifier_field: "topic"
     folder: "_topics/"
     widget: "list"
     allow_add: true
