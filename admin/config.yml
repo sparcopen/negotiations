@@ -69,10 +69,10 @@ collections:
     label_singular: "Topic"
     identifier_field: "topic"
     folder: "_topics/"
+    slug: "{{slug}}"
     widget: "list"
     allow_add: true
     create: true
-    slug: "/tags/{{slug}}"
     editor:
       preview: false
     fields:
