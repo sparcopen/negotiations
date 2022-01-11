@@ -85,7 +85,7 @@
         <ul class="tags">
           {% for tag in site.topics %}
           <li class="tag">
-            <a href="{{ site.BASE_PATH }}/topics/map-topic-{{ tag.topic | slugify }}">{{ tag.topic }}</a>
+            <a href="{{ site.BASE_PATH }}{{ tag.url | remove: '.html' }}">{{ tag.topic }}</a>
           </li>
           {% endfor %}
         </ul>
@@ -103,7 +103,7 @@
           <ol class="homepage__blog">
             {% for post in posts limit:4 %}
             <li>
-              <a href="{{ site.BASE_PATH }}{{ post.url }}" class="label">
+              <a href="{{ site.BASE_PATH }}{{ post.url | remove: '.html' }}" class="label">
                 <article>
                   <time datetime="{{ post.date | date: '%F' }}">{{ post.date | date: "%b %e, %Y" }}</time>
                   <h3>{{ post.title }}</h3>
