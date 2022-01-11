@@ -58,7 +58,7 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Display Name", name: "title", widget: "string" }
+      - { label: "Display Name", name: "display_name", widget: "string" }
       - { label: "Affiliation", name: "affiliation", widget: "string", required: false }
       - { label: "Contact email", name: "email", widget: "string", required: false }
       - { label: "Link to external bio", name: "link_bio", widget: "string", required: false }
@@ -103,9 +103,9 @@ collections:
           widget: "relation",
           collection: "authors",
           multiple: true,
-          display_fields: [title],
-          search_fields: [title],
-          value_field: "title",
+          display_fields: [display_name],
+          search_fields: [display_name],
+          value_field: "display_name",
           required: false
         }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -136,9 +136,9 @@ collections:
           widget: "relation",
           collection: "authors",
           multiple: true,
-          display_fields: [title],
-          search_fields: [title],
-          value_field: "title",
+          display_fields: [display_name],
+          search_fields: [display_name],
+          value_field: "display_name",
           required: false
         }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -169,9 +169,9 @@ collections:
           widget: "relation",
           collection: "authors",
           multiple: true,
-          display_fields: [title],
-          search_fields: [title],
-          value_field: "title",
+          display_fields: [display_name],
+          search_fields: [display_name],
+          value_field: "display_name",
           required: false
         }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -202,9 +202,9 @@ collections:
           widget: "relation",
           collection: "authors",
           multiple: true,
-          display_fields: [title],
-          search_fields: [title],
-          value_field: "title",
+          display_fields: [display_name],
+          search_fields: [display_name],
+          value_field: "display_name",
           required: false
         }
       - { label: "Body", name: "body", widget: "markdown" }
