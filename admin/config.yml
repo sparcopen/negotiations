@@ -50,6 +50,7 @@ collections:
   - name: "authors"
     label: "Authors"
     label_singular: "Author"
+    identifier_field: "display_name"
     folder: "_authors/"
     slug: "{{slug}}"
     widget: "list"
@@ -57,7 +58,6 @@ collections:
     create: true
     editor:
       preview: false
-    identifier_field: display_name
     fields:
       - { label: "Display Name", name: "display_name", widget: "string" }
       - { label: "Affiliation", name: "affiliation", widget: "string", required: false }
