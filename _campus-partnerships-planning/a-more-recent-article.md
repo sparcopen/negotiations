@@ -6,6 +6,8 @@ summary: Vestibulum vehicula sit amet tortor quis eleifend. Curabitur sagittis
   massa ac augue dapibus efficitur. Cras vitae lacinia quam. Curabitur placerat
   iaculis ex at mattis. Integer libero eros, malesuada vitae egestas quis,
   blandit facilisis nulla.
+authors:
+  - Nick Shockey
 ---
 Aenean ut mi placerat, vehicula augue vel, fermentum est. Nulla accumsan venenatis est id imperdiet. Morbi in velit nec urna lobortis egestas. Etiam eu pharetra lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce dapibus justo at felis aliquet, eu tempor ligula euismod. Vestibulum quis turpis in nisl pharetra dignissim. Nullam tempus venenatis odio, id imperdiet erat varius ut. Suspendisse nec lectus urna. **Vivamus ante libero, lacinia vitae quam sit amet, pulvinar aliquet libero. Aliquam vitae vestibulum erat.**
 
