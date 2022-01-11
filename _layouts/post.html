@@ -48,9 +48,6 @@
       </header>
 
       <div class="col col--3of6 page-sidebar-content">
-        {% if page.collection == "members" %}
-        {% include members-box.html %}
-        {% endif %}
 
         {% if page.topics.size > 0 %}
         <h2 class="sr-only">Tags</h2>
@@ -64,6 +61,8 @@
         <article class="page-content">
           {{ page.content | markdownify }}
         </article>
+
+        {% include authors-box.html %}
 
         {% include pagination.html %}
       </div>
