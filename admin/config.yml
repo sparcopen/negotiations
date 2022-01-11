@@ -51,13 +51,14 @@ collections:
     label: "Authors"
     label_singular: "Author"
     folder: "_authors/"
+    slug: "{{slug}}"
     widget: "list"
     allow_add: true
     create: true
     editor:
       preview: false
     fields:
-      - { label: "Display Name", name: "display_name", widget: "string" }
+      - { label: "Display Name", name: "title", widget: "string" }
       - { label: "Affiliation", name: "affiliation", widget: "string", required: false }
       - { label: "Contact email", name: "email", widget: "string", required: false }
       - { label: "Link to external bio", name: "link_bio", widget: "string", required: false }
@@ -102,7 +103,6 @@ collections:
           widget: "relation",
           collection: "authors",
           multiple: true,
-          slug: "{{slug}}",
           display_fields: [display_name],
           search_fields: [display_name],
           value_field: "display_name",
