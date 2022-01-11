@@ -1,6 +1,10 @@
 .page-content {
   padding: $spacing-04 0;
 
+  h2:first-child {
+    margin-top: 0;
+  }
+
   // Asterisk fleuron
   &:after {
     display: block;
