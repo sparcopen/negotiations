@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2021-03-01T15:14:26.390Z
+date: 2022-01-11T21:59:15.970Z
 title: Data Analysis Article
 topics:
   - A good tag
