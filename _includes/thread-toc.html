@@ -1,11 +1,3 @@
-{% if page.thread_type == "topic" %}
-  {% assign thread = page.topic | slugify %}
-{% else %}
-  {% assign thread = page.url | remove: "/" | remove: ".html" %}
-  {% assign posts = site[thread] | reverse %}
-{% endif %}
-
-{% for post in posts %}
 <li class="toc__item">
 <article class="row">
   <header class="col col--group col--1of3">
@@ -34,6 +26,20 @@
     {% endif %}
   </header>
   <div class="col col--group col--2of3">
+    {% if post.topics.size > 0 %}
+    <h2 class="sr-only">Tags</h2>
+    <ul class="tags">
+      {% for tag in post.topics %}
+      {% for tag in site.topics %}
+        {% if topics.slug == tag_slug %}
+        <li class="tag">
+          <a href="{{ site.BASE_PATH }}{{ tag.url | remove: '.html' }}">{{ tag.topic }}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
+      {% endfor %}
+    </ul>
+    {% endif %}
     {% if post.summary %}
     <p><small>{{ post.summary }}</small></p>
     {% endif %}
@@ -49,4 +55,3 @@
   </div>
 </article>
 </li>
-{% endfor %}
