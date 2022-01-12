@@ -6,14 +6,17 @@
 .tag {
   a {
     margin: 0 $spacing-03 $spacing-03 0;
-    padding: $spacing-02 $spacing-03;
+    padding: $spacing-01 $spacing-03;
     border-radius: 9999px;
     text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
     background-color: $black;
     color: $white;
-    line-height: 2.5;
+    line-height: 1;
+    font-size: small;
     @include font-sans;
-    @include typescale-06;
   }
 
   &:last-of-type a {
