@@ -80,7 +80,7 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
   - name: "campus-partnerships-planning"
     label: "Campus Partnerships Planning"
-    label_singular: "post"
+    label_singular: "CPPWG post"
     folder: "_campus-partnerships-planning/"
     create: true
     fields:
@@ -114,7 +114,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "data-analysis"
     label: "Data Analysis"
-    label_singular: "post"
+    label_singular: "DAWG post"
     folder: "_data-analysis/"
     create: true
     fields:
@@ -148,7 +148,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "journal-cancellation-impact"
     label: "Journal Cancellation Impact"
-    label_singular: "post"
+    label_singular: "JCIWG post"
     folder: "_journal-cancellation-impact/"
     create: true
     fields:
@@ -182,7 +182,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "reinvestments"
     label: "Reinvestments"
-    label_singular: "post"
+    label_singular: "Reinvestments WG post"
     folder: "_reinvestments/"
     create: true
     fields:
