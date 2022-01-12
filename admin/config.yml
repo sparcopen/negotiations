@@ -77,6 +77,7 @@ collections:
       preview: false
     fields:
       - { label: "Topic", name: "topic", widget: "string" }
+      - { label: "Topic ID", name: "topic_id", widget: "hidden", default: "{{ slug }}" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
       - { label: "Thread type", name: "thread_type", widget: "hidden", default: "topic" }
   - name: "campus-partnerships-planning"
