@@ -56,7 +56,13 @@
         <h2 class="sr-only">Tags</h2>
         <ul class="tags" style="text-align: right;">
           {% for tag in page.topics %}
-          <li class="tag"><a href="../{{ tag }}"><small>{{ tag }}</small></a></li>
+          {% for tag in site.topics %}
+            {% if topics.slug == tag_slug %}
+            <li class="tag">
+              <a href="{{ site.BASE_PATH }}{{ tag.url | remove: '.html' }}"><small>{{ tag.topic }}</small></a>
+            </li>
+            {% endif %}
+          {% endfor %}
           {% endfor %}
         </ul>
         {% endif %}
