@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body class="post">
+  <body class="post{% if page.full_page == true %} full-page{% endif %}">
     <main class="row">
-      <header class="col col--1of3 page-sidebar">
+      <header class="col {% if page.full_page == true %}full-page__header{% else %}col--1of3 page-sidebar{% endif %}">
         <a href="/" class="page-sidebar__home screen-only">
           {% include svg/bookmark.svg %}
           <span class="sr-only">Return to homepage</span>
@@ -13,7 +13,10 @@
             Published {{ page.date | date: "%b %e, %Y" }}
           </time>
         </p>
-        <h1>{{ page.title }}</h1>
+        <h1>
+          {{ page.title }}{% if page.full_page == true %}
+          <a href="#content" style="text-decoration: none;"><span class="sr-only">Scroll to content</span>&darr;</a>{% endif %}
+        </h1>
         <p class="font-sans">
           <small>
           {% assign words = page.content | number_of_words %}
@@ -47,7 +50,7 @@
         {% endif %}
       </header>
 
-      <div class="col col--3of6 page-sidebar-content">
+      <div class="col {% if page.full_page == true %}full-page__content{% else %}col--3of6 page-sidebar-content{% endif %}">
 
         {% if page.topics.size > 0 %}
         <h2 class="sr-only">Tags</h2>
@@ -58,7 +61,7 @@
         </ul>
         {% endif %}
 
-        <article class="page-content">
+        <article class="page-content" id="content">
           {{ page.content | markdownify }}
         </article>
 

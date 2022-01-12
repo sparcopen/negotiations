@@ -1,0 +1,18 @@
+/* Full-page content, e.g. the Glossary / table */
+
+.full-page {
+
+  &.post .page-content {
+    border: 0;
+  }
+}
+
+.full-page__header {
+  background: $black;
+  color: $white;
+  @include typescale-06;
+
+  a {
+    color: $white;
+  }
+}
