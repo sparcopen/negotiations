@@ -1,48 +1,52 @@
-{% assign thread = page.url | remove: "/" | remove: ".html" %}
-{% assign posts = site[thread] | reverse %}
+{% if page.thread_type == "topic" %}
+  {% assign thread = page.topic | slugify %}
+{% else %}
+  {% assign thread = page.url | remove: "/" | remove: ".html" %}
+  {% assign posts = site[thread] | reverse %}
+{% endif %}
 
 {% for post in posts %}
 <li class="toc__item">
-  <article class="row">
-    <header class="col col--group col--1of3">
-      <p class="label"><small>{% include post-date.html %}</small></p>
-      <h4>
-        <a {% if post.link %}href="{{ post.link }}" target="_blank" rel="noopener"{% else %}href="{{ post.url }}"{% endif %} class="toc__link">
-          {{ post.title }}{% if post.link %} {% include svg/arrow-northeast.svg %}{% endif %}
-        </a>
-      </h4>
-      {% if post.authors or post.author %}
-      <p class="metadata">
-        <small>
-        {% if post.authors %}
-          {% for author in post.authors %}
-            {% if forloop.last %}
-              {{ author }}
-            {% else %}
-              {{ author }},
-            {% endif %}
-          {% endfor %}
-        {% elsif post.author %}
-          {{ post.author }}
-        {% endif %}
-        </small>
-      </p>
-      {% endif %}
-    </header>
-    <div class="col col--group col--2of3">
-      {% if post.summary %}
-      <p><small>{{ post.summary }}</small></p>
-      {% endif %}
-      <p class="metadata label">
-        <small>
-          {% if post.link %}
-            {{ post.reading-time }}
+<article class="row">
+  <header class="col col--group col--1of3">
+    <p class="label"><small>{% include post-date.html %}</small></p>
+    <h4>
+      <a {% if post.link %}href="{{ post.link }}" target="_blank" rel="noopener"{% else %}href="{{ post.url }}"{% endif %} class="toc__link">
+        {{ post.title }}{% if post.link %} {% include svg/arrow-northeast.svg %}{% endif %}
+      </a>
+    </h4>
+    {% if post.authors or post.author %}
+    <p class="metadata">
+      <small>
+      {% if post.authors %}
+        {% for author in post.authors %}
+          {% if forloop.last %}
+            {{ author }}
           {% else %}
-            {% include post-readtime.html %}
+            {{ author }},
           {% endif %}
-        </small>
-      </p>
-    </div>
-  </article>
+        {% endfor %}
+      {% elsif post.author %}
+        {{ post.author }}
+      {% endif %}
+      </small>
+    </p>
+    {% endif %}
+  </header>
+  <div class="col col--group col--2of3">
+    {% if post.summary %}
+    <p><small>{{ post.summary }}</small></p>
+    {% endif %}
+    <p class="metadata label">
+      <small>
+        {% if post.link %}
+          {{ post.reading-time }}
+        {% else %}
+          {% include post-readtime.html %}
+        {% endif %}
+      </small>
+    </p>
+  </div>
+</article>
 </li>
 {% endfor %}
