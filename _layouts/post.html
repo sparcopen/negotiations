@@ -3,7 +3,7 @@
   {% include head.html %}
   <body class="post{% if page.full_page == true %} full-page{% endif %}">
     <main class="row">
-      <header class="col {% if page.full_page == true %}full-page__header{% else %}col--1of3 page-sidebar{% endif %}">
+      <header class="col page-sidebar">
         <a href="/" class="page-sidebar__home screen-only">
           {% include svg/bookmark.svg %}
           <span class="sr-only">Return to homepage</span>
@@ -17,19 +17,6 @@
           {{ page.title }}{% if page.full_page == true %}
           <a href="#content" style="text-decoration: none;"><span class="sr-only">Scroll to content</span>&darr;</a>{% endif %}
         </h1>
-        <p class="font-sans">
-          <small>
-          {% assign words = page.content | number_of_words %}
-          {% if words < 360 %}
-            1 min read
-          {% else %}
-            {{ words | divided_by:150 }} mins read
-          {% endif %}
-          </small>
-          <small class="font-sans">From the
-          <a href="{{ site.BASE_PATH }}/{{ page.collection }}">{%- include wg_full_name.html -%}</a>
-          working group</small>
-        </p>
         {% if page.authors or page.author %}
         <p class="font-sans">
           <small>
@@ -50,13 +37,27 @@
         {% endif %}
       </header>
 
-      <aside class="col col--1of3 page-sidebar-aside">
+      <aside class="col{% if page.full_page == true %} full-page__aside{% else %} col--1of3 page-sidebar-aside{% endif %}">
         {% comment %}
         <p class="button-group">
           <a href="#citationContent" class="button accordion-toggle">Cite</a>
         </p>
         {% include citation.html class="accordion__content" id="citationContent"%}
         {% endcomment %}
+
+        <p class="font-sans">
+          <small>
+          {% assign words = page.content | number_of_words %}
+          {% if words < 360 %}
+            1 min read
+          {% else %}
+            {{ words | divided_by:150 }} mins read
+          {% endif %}
+          </small>
+          <small class="font-sans">From the
+          <a href="{{ site.BASE_PATH }}/{{ page.collection }}">{%- include wg_full_name.html -%}</a>
+          working group</small>
+        </p>
 
         {% include tags.html %}
 

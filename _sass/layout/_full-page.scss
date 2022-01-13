@@ -2,17 +2,21 @@
 
 .full-page {
 
+  &__header {
+    background: $black;
+    color: $white;
+    @include typescale-06;
+
+    a {
+      color: $white;
+    }
+  }
+
+  &__aside {
+    padding-top: $spacing-04;
+  }
+
   &.post .page-content {
     border: 0;
-  }
-}
-
-.full-page__header {
-  background: $black;
-  color: $white;
-  @include typescale-06;
-
-  a {
-    color: $white;
   }
 }

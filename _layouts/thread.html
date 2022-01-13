@@ -4,7 +4,7 @@
 
   <body class="thread">
     <main class="row">
-      <header class="col col--1of3 page-sidebar">
+      <header class="col col--1of3 page-sidebar page-sidebar--fixed">
         <a href="/" class="page-sidebar__home screen-only">
           {% include svg/bookmark.svg %}
           <span class="sr-only">Return to homepage</span>
@@ -29,7 +29,7 @@
 
       <div class="col col--2of3 page-sidebar-content">
         <section class="page-content">
-          {% if page.content %}
+          {% if page.content.size > 1 %}
           <div class="row">
             <div class="col col--2of3 infobox">
               {{ page.content | markdownify }}

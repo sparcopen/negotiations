@@ -1,21 +1,11 @@
 .page-sidebar {
+  z-index: 1;
   background: $black;
   color: $white;
   font-size: 18px;
 
-  @media (min-width: 768px) {
-    width: 33.3333333%;
-    min-height: 100vh;
-  }
-
-  @media (min-width: 1200px) {
-    position: fixed;
-    left: 0;
-  }
-
   h1 {
     margin: 0 0 $spacing-04 0;
-    @include typescale-02;
   }
 
   a {
@@ -35,10 +25,22 @@
       }
     }
   }
+
+  &--fixed {
+    @media (min-width: 768px) {
+      width: 33.3333333%;
+      min-height: 100vh;
+    }
+
+    @media (min-width: 1200px) {
+      position: fixed;
+      left: 0;
+    }
+  }
 }
 
 .page-sidebar-content {
-  margin-top: $spacing-03;
+  margin-top: $spacing-04;
 
   @media (min-width: 1200px) {
     margin-left: 33.3333333%;
@@ -54,6 +56,16 @@
 .page-sidebar-aside {
   @include typescale-06;
 
+  @media (min-width: 768px) {
+    width: 33.3333333%;
+    min-height: 100vh;
+  }
+
+  @media (min-width: 1200px) {
+    position: fixed;
+    left: 0;
+  }
+
   h2 {
     margin-top: 0;
   }
@@ -63,7 +75,6 @@
   }
 
   @media (min-width: 768px) {
-    width: 16.6666667%;
     margin: $spacing-05 0;
   }
 }
