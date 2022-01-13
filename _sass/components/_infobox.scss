@@ -26,6 +26,12 @@
     margin-top: $spacing-03;
     font-weight: 800;
     @include font-sans;
+    color: $black;
+
+    a {
+      margin-top: $spacing-03;
+      margin-right: $spacing-02;
+    }
   }
 
   &--authors {
@@ -55,28 +61,6 @@
     svg {
       height: 10px;
       width: auto;
-    }
-
-    .logo {
-      display: block;
-      margin-bottom: $spacing-04;
-      height: 30px;
-      width: auto;
-
-      @media (min-width: 768px) {
-        padding-right: $spacing-04;
-        height: auto;
-        width: 100%;
-      }
-    }
-
-    .infobox__links {
-      color: $black;
-
-      a {
-        margin-top: $spacing-03;
-        margin-right: $spacing-02;
-      }
     }
   }
 }

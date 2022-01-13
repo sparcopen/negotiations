@@ -30,6 +30,12 @@
   }
 }
 
+.desktop-only {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
 .no-padding {
   padding: 0;
 }

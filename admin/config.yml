@@ -15,6 +15,14 @@ collections:
           - { label: "Layout", name: "layout", widget: "hidden", default: "default" }
           - { label: "About summary", name: "summary", widget: "text" }
           - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Blog"
+        name: "blog"
+        file: "blog.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string", default: "All blog posts" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
+          - { label: "Thread type", name: "thread_type", widget: "hidden", default: "blog"}
+          - { label: "About summary", name: "summary", widget: "text", required: false }
       - label: "Campus Partnerships Planning"
         name: "campus-partnerships-planning"
         file: "campus-partnerships-planning.md"

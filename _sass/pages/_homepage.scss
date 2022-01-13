@@ -95,10 +95,14 @@
   }
 
   &__group {
-    margin-bottom: $spacing-06;
+    margin-bottom: $spacing-05;
     width: 100%;
     min-height: 33vh;
     justify-content: space-between;
+
+    @media (min-width: 768px) {
+      margin-bottom: $spacing-06;
+    }
 
     header {
       margin-bottom: $spacing-03;
@@ -160,7 +164,10 @@
   &__group-latest {
     display: block;
     padding-top: $spacing-04;
-    border-top: 5px solid;
+
+    @media (min-width: 768px) {
+      border-top: 5px solid;
+    }
   }
 
   &__blog {

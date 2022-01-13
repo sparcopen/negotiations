@@ -32,27 +32,29 @@
       {% if page.cover_img %}
       </div>
       {% endif %}
-      
+
       <div class="row">
         <div class="col col--1of3">
-          {% if page.content.size > 1 %}
-            <div class="infobox">
-              {{ page.content | markdownify }}
-            </div>
-          {% endif %}
+          <div class="sticky-sidebar">
+            {% if page.content.size > 1 %}
+              <div class="infobox">
+                {{ page.content | markdownify }}
+              </div>
+            {% endif %}
 
-          {% if page.thread_type == 'topic' %}
-          <div class="infobox">
-            <h2 class="label">All tags</h2>
-            <ul class="tags">
-              {% for tag in site.topics %}
-                <li class="tag">
-                  <a href="{{ site.BASE_PATH }}{{ tag.url | remove: '.html' }}">{{ tag.topic }}</a>
-                </li>
-              {% endfor %}
-            </ul>
+            {% if page.thread_type == 'topic' %}
+            <div class="infobox">
+              <h2 class="label">All tags</h2>
+              <ul class="tags">
+                {% for tag in site.topics %}
+                  <li class="tag">
+                    <a href="{{ site.BASE_PATH }}{{ tag.url | remove: '.html' }}">{{ tag.topic }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
           </div>
-          {% endif %}
         </div>
         <div class="col col--2of3">
           <section class="page-content">

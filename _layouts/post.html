@@ -36,36 +36,34 @@
         </p>
         {% endif %}
       </header>
-      <hr/>
-      {{ data-analysis }}
-      <hr/>
 
-      <aside class="col{% if page.full_page == true %} full-page__aside{% else %} col--1of3 page-header-aside{% endif %}">
-        {% comment %}
-        <p class="button-group">
-          <a href="#citationContent" class="button accordion-toggle">Cite</a>
-        </p>
-        {% include citation.html class="accordion__content" id="citationContent"%}
-        {% endcomment %}
+      <aside class="col{% if page.full_page == true %} full-page__aside{% else %} col--1of3{% endif %}">
+        {% if page.full_page != true %}<div class="sticky-sidebar">{% endif %}
+          {% comment %}
+          <p class="button-group">
+            <a href="#citationContent" class="button accordion-toggle">Cite</a>
+          </p>
+          {% include citation.html class="accordion__content" id="citationContent"%}
+          {% endcomment %}
 
-        <p>
-          From the
-          <a href="{{ site.BASE_PATH }}/{{ page.collection }}">{%- include wg_full_name.html -%}</a>
-          working group<br/>
-          <small>
-            {% include post-readtime.html %}
-          </small>
-        </p>
+          <p>
+            From the
+            <a href="{{ site.BASE_PATH }}/{{ page.collection }}">{%- include wg_full_name.html -%}</a>
+            working group<br/>
+            <small>
+              {% include post-readtime.html %}
+            </small>
+          </p>
 
-        {% include tags.html %}
+          {% include tags.html %}
 
-        <p>
-          <button id="printButton" class="button" onClick="window.print()">Print</button>
-        </p>
-
+          <p class="desktop-only">
+            <button id="printButton" class="button" onClick="window.print()">Print</button>
+          </p>
+        {% if page.full_page != true %}</div>{% endif %}
       </aside>
 
-      <div class="col {% if page.full_page == true %}full-page__content{% else %}col--3of6 page-header-content{% endif %}">
+      <div class="col {% if page.full_page == true %}full-page__content{% else %}col--3of6{% endif %}">
 
         <article class="page-content" id="content">
           {{ page.content | markdownify }}

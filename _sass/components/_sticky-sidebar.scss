@@ -1,0 +1,6 @@
+.sticky-sidebar {
+  @media (min-width: 768px) {
+    position: sticky;
+    top: $spacing-04;
+  }
+}

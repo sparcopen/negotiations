@@ -20,63 +20,11 @@
 
       &:hover, &:focus, &:active {
         fill: $white;
+
+        path:not(:first-child) {
+          fill: $black;
+        }
       }
     }
-  }
-
-  &--fixed {
-    @media (min-width: 768px) {
-      width: 33.3333333%;
-      min-height: 100vh;
-    }
-
-    @media (min-width: 1200px) {
-      position: fixed;
-      left: 0;
-    }
-  }
-}
-
-.page-header-content {
-  @media (min-width: 1200px) {
-    margin-left: 33.3333333%;
-  }
-
-  &__bleed {
-    @media (min-width: 768px) {
-      margin-right: -16.6666667%;
-    }
-  }
-}
-
-.page-header-aside {
-  @include typescale-06;
-
-  @media (min-width: 768px) {
-    width: 33.3333333%;
-    min-height: 100vh;
-  }
-
-  @media (min-width: 1200px) {
-    position: fixed;
-    left: 0;
-  }
-
-  h2 {
-    margin-top: 0;
-  }
-
-  .tags {
-    margin-bottom: $spacing-03;
-  }
-
-  @media (min-width: 768px) {
-    margin: $spacing-05 0;
-  }
-}
-
-.page-header-footer {
-  @media (min-width: 768px) {
-    margin-left: 33.3333333%;
   }
 }
