@@ -3,8 +3,8 @@
   {% include head.html %}
   <body class="post{% if page.full_page == true %} full-page{% endif %}">
     <main class="row">
-      <header class="col page-sidebar">
-        <a href="/" class="page-sidebar__home screen-only">
+      <header class="col page-header">
+        <a href="/" class="page-header__home screen-only">
           {% include svg/bookmark.svg %}
           <span class="sr-only">Return to homepage</span>
         </a>
@@ -37,7 +37,7 @@
         {% endif %}
       </header>
 
-      <aside class="col{% if page.full_page == true %} full-page__aside{% else %} col--1of3 page-sidebar-aside{% endif %}">
+      <aside class="col{% if page.full_page == true %} full-page__aside{% else %} col--1of3 page-header-aside{% endif %}">
         {% comment %}
         <p class="button-group">
           <a href="#citationContent" class="button accordion-toggle">Cite</a>
@@ -67,7 +67,7 @@
 
       </aside>
 
-      <div class="col {% if page.full_page == true %}full-page__content{% else %}col--3of6 page-sidebar-content{% endif %}">
+      <div class="col {% if page.full_page == true %}full-page__content{% else %}col--3of6 page-header-content{% endif %}">
 
         <article class="page-content" id="content">
           {{ page.content | markdownify }}
@@ -78,7 +78,7 @@
         {% include pagination.html %}
       </div>
 
-      <div class="col col--3of6 page-sidebar-footer">
+      <div class="col col--3of6 page-header-footer">
         {% include footer.html %}
       </div>
     </main>

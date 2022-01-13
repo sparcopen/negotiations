@@ -1,4 +1,4 @@
-.page-sidebar {
+.page-header {
   z-index: 1;
   background: $black;
   color: $white;
@@ -39,7 +39,7 @@
   }
 }
 
-.page-sidebar-content {
+.page-header-content {
   margin-top: $spacing-04;
 
   @media (min-width: 1200px) {
@@ -53,7 +53,7 @@
   }
 }
 
-.page-sidebar-aside {
+.page-header-aside {
   @include typescale-06;
 
   @media (min-width: 768px) {
@@ -79,7 +79,7 @@
   }
 }
 
-.page-sidebar-footer {
+.page-header-footer {
   @media (min-width: 768px) {
     margin-left: 33.3333333%;
   }

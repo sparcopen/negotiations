@@ -13,14 +13,14 @@
   .print-only {
     display: block;
   }
-  
+
   .tag a {
     padding: 0;
     margin: 0 !important;
     font-weight: 600 !important;;
   }
 
-  .page-sidebar {
+  .page-header {
     position: relative;
     color: $black;
 
@@ -61,14 +61,14 @@
 
   .anchorjs-link,
   .pagination,
-  .page-sidebar-aside,
+  .page-header-aside,
   .post__summary,
   .post__read-time,
   .sr-only,
   .infobox--join,
   .button,
   .infobox__links,
-  .page-sidebar-aside {
+  .page-header-aside {
     display: none !important;
   }
 }
