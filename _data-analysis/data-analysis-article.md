@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2022-01-11T21:59:15.970Z
-title: Data Analysis Article
+title: The Great Siberian Thaw
 topics:
   - A good tag
 summary: A shorter blab
@@ -9,4 +9,18 @@ authors:
   - Caitlin Carter
   - Nick Shockey
 ---
-A very long blab with **Markdown.** Lorem ipsum dolor sit amet.
+One clue to how permafrost will survive this current era of warming is how it fared during the previous one. Five years ago, Julian Murton, a scientist and professor at the University of Sussex, led a team of researchers to the Batagaika Crater, a permafrost thaw slump in central Yakutia. A thaw slump is essentially a drawn-out landslide set off by thawing yedoma; the Batagaika Crater is the largest in the world, a half-mile-long gash in the earth with walls as high as two hundred and eighty feet. The crater is constantly thawing and collapsing, growing by as much as a hundred feet a year. Locals call it a “gateway to Hell.” A more apt metaphor may be a geological layer cake, whose exposed walls allow a rare opportunity to look at hundreds of thousands of years of permafrost all at once.
+
+Murton told me that the first thing that struck him during his time at the crater was the sound. “It’s like an orchestral piece,” he said. “In the summer, when the head wall is thawing quickly, you hear the constant trickle of water, like first violins. And then you have these massive chunks of permafrost, up to half a ton, that fall to the bottom with a big thud. That’s the percussion.”
+
+Murton and his team drilled boreholes down the crater’s walls, and used a method called luminescence dating to estimate the age of the sediment that they extracted. The bottom layer of permafrost turned out to be at least six hundred and fifty thousand years old. As Murton explained, that means it survived the previous interglacial period, which began some hundred and thirty thousand years ago, when parts of the Arctic were as much as four or five degrees Celsius warmer than they are today. “The oldest permafrost in Eurasia has been kicking around for over half a million years,” Murton told me. “Seeing as it survived intense global-warming events in the past, it must be pretty resilient.”
+
+That’s the good news. “If you like permafrost, as I do, we’re not going to be short on it in our lifetimes,” Murton said. But his hypothesis on the resilience of permafrost applies to frozen earth that extends hundreds of feet below the surface. “The top several metres are certainly under threat,” he said. That is exactly where the carbon is: the upper three metres of permafrost hold half as much carbon as similar soil depths in the rest of the planet’s ecosystems combined. Moreover, as Murton put it, “even as it appears that the ecosystem can protect permafrost from high air temperatures, if that ecosystem is disturbed, permafrost suddenly becomes very vulnerable.” The Batagaika Crater itself formed after a large patch of forest was clear-cut, in the nineteen-sixties.
+
+These days, fire is the biggest threat to the landscape. Last summer was Yakutia’s worst fire season in history, with eight million hectares ablaze—an area about the size of Maine—releasing the equivalent of more than five hundred megatons of carbon dioxide. It is hard to predict what sort of long-term effect fire will have on the permafrost. In some parts of Yakutia, the boreal forest has been able to regenerate itself, bringing new trees and underbrush that sequester carbon, and the situation has returned to equilibrium. But in other places—especially those full of ice-rich yedoma—fires have caused irreversible changes in the landscape, such as a thermokarst lake or a crater like Batagaika. Sander Veraverbeke, a climate scientist at Vrije Universiteit Amsterdam, who has done extensive field work in Yakutia, told me, “In that scenario, the permafrost never recovers.”
+
+One day in Chersky, Zimov showed me a site where he had tried to mimic the result of a fire on the permafrost. He drove us in a motorboat down the river, the wind slicing through my jacket and chafing my face. We tied the boat to some bushes, and set off through the spongy moss of the tundra. “I actually hate terrain like this,” Zimov said. “Everything is soft and squishy, with mosquitoes everywhere.”
+
+Half an hour later, we came to a clearing that had the same bumpy features that I had seen in the village of Usun-Kyuyol. In 2003, Zimov had used a “very, very large bulldozer,” which he borrowed from a nearby gold mine, to uproot shrubs and moss and remove the topsoil, much the way a fire might. (“This is the kind of experiment Sergey likes,” Göckede had told me. “For him, a bulldozer is a scientific instrument.”) Within a year, the ice in the yedoma began to melt, collapsing the ground and leading the permafrost to thaw at ever greater depths.
+
+Zimov and I were each carrying a long metal probe, the permafrost scientist’s classic field tool. The point at which the tip hits hard ice reveals the depth of permafrost thaw. Zimov has an ear for frozen soil, able to judge its consistency by the sound it makes when struck by metal. “It’s loose, ready to crumble,” he declared. Thirty years ago, during an average summer, the permafrost thawed to a depth of less than a metre. Now, at the bulldozed site, Zimov had to fasten two probes together, finally hitting solid ice at a depth of three and a half metres. All that thawed soil was producing carbon dioxide and, at deeper levels, where there is less oxygen, methane. “You’d need five very cold, raw winters in a row to freeze it again,” Zimov said. “And I don’t quite believe we’ll see that again.”
