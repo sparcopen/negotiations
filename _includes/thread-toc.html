@@ -26,8 +26,6 @@
     {% endif %}
   </header>
   <div class="col col--group col--2of3">
-    {% include tags.html %}
-    
     {% if post.summary %}
     <p><small>{{ post.summary }}</small></p>
     {% endif %}
@@ -40,6 +38,7 @@
         {% endif %}
       </small>
     </p>
+    {% include tags.html %}
   </div>
 </article>
 </li>
