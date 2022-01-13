@@ -50,22 +50,23 @@
         {% endif %}
       </header>
 
-      <div class="col {% if page.full_page == true %}full-page__content{% else %}col--3of6 page-sidebar-content{% endif %}">
+      <aside class="col col--1of3 page-sidebar-aside">
+        {% comment %}
+        <p class="button-group">
+          <a href="#citationContent" class="button accordion-toggle">Cite</a>
+        </p>
+        {% include citation.html class="accordion__content" id="citationContent"%}
+        {% endcomment %}
 
-        {% if page.topics.size > 0 %}
-        <h2 class="sr-only">Tags</h2>
-        <ul class="tags" style="text-align: right;">
-          {% for tag in page.topics %}
-          {% for tag in site.topics %}
-            {% if topics.slug == tag_slug %}
-            <li class="tag">
-              <a href="{{ site.BASE_PATH }}{{ tag.url | remove: '.html' }}"><small>{{ tag.topic }}</small></a>
-            </li>
-            {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </ul>
-        {% endif %}
+        {% include tags.html %}
+
+        <p>
+          <button id="printButton" class="button" onClick="window.print()">Print</button>
+        </p>
+
+      </aside>
+
+      <div class="col {% if page.full_page == true %}full-page__content{% else %}col--3of6 page-sidebar-content{% endif %}">
 
         <article class="page-content" id="content">
           {{ page.content | markdownify }}
@@ -75,20 +76,6 @@
 
         {% include pagination.html %}
       </div>
-
-      <aside class="col col--1of6 page-sidebar-aside">
-        {% comment %}
-        <p class="button-group">
-          <a href="#citationContent" class="button accordion-toggle">Cite</a>
-        </p>
-        {% include citation.html class="accordion__content" id="citationContent"%}
-        {% endcomment %}
-
-        <p>
-          <button id="printButton" class="button" onClick="window.print()">Print</button>
-        </p>
-
-      </aside>
 
       <div class="col col--3of6 page-sidebar-footer">
         {% include footer.html %}

@@ -1,0 +1,33 @@
+{% if page.layout == 'thread' %}
+  {% if post.topics.size > 0 %}
+  <h2 class="sr-only">Tags</h2>
+  <ul class="tags">
+    {% for post_tag in post.topics %}
+    {% assign tag_slug = post_tag | slugify %}
+    {% for tag in site.topics %}
+      {% if tag.slug == tag_slug %}
+      <li class="tag">
+        <a href="{{ site.BASE_PATH }}{{ tag.url | remove: '.html' }}">{{ tag.topic }}</a>
+      </li>
+      {% endif %}
+    {% endfor %}
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% else %}
+  {% if page.topics.size > 0 %}
+  <h2 class="sr-only">Tags</h2>
+  <ul class="tags">
+    {% for post_tag in page.topics %}
+    {% assign tag_slug = post_tag | slugify %}
+    {% for tag in site.topics %}
+      {% if tag.slug == tag_slug %}
+      <li class="tag">
+        <a href="{{ site.BASE_PATH }}{{ tag.url | remove: '.html' }}">{{ tag.topic }}</a>
+      </li>
+      {% endif %}
+    {% endfor %}
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endif %}
