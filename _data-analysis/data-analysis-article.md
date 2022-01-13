@@ -4,7 +4,8 @@ date: 2022-01-11T21:59:15.970Z
 title: The Great Siberian Thaw
 topics:
   - A good tag
-summary: A shorter blab
+summary: Permafrost contains microbes, mammoths, and twice as much carbon as
+  Earth’s atmosphere. What happens when it starts to melt?
 authors:
   - Caitlin Carter
   - Nick Shockey
