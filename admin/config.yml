@@ -145,7 +145,7 @@ collections:
           value_field: "display_name",
           required: false
         }
-      - { label: "Full-page content?", name: "full_page", widget: "boolean", default: false }
+      - { label: "Full-page content?", name: "full_page", widget: "boolean", default: false, required: false }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "journal-cancellation-impact"
     label: "Journal Cancellation Impact"
@@ -179,7 +179,7 @@ collections:
           value_field: "display_name",
           required: false
         }
-      - { label: "Full-page content?", name: "full_page", widget: "boolean", default: false }
+      - { label: "Full-page content?", name: "full_page", widget: "boolean", default: false, required: false }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "reinvestments"
     label: "Reinvestments"
@@ -213,7 +213,7 @@ collections:
           value_field: "display_name",
           required: false
         }
-      - { label: "Full-page content?", name: "full_page", widget: "boolean", default: false }
+      - { label: "Full-page content?", name: "full_page", widget: "boolean", default: false, required: false }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "blog"
     label: "Blog"
