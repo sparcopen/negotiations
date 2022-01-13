@@ -40,11 +40,7 @@
 
     <p class="metadata label">
       <small>
-        {% if post.link %}
-          {{ post.reading-time }}
-        {% else %}
-          {% include post-readtime.html %}
-        {% endif %}
+        {% include post-readtime.html %}
       </small>
     </p>
     {% include tags.html %}

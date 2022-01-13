@@ -1,10 +1,11 @@
-{% if post.link %}
-  {{ post.reading-time }}
+{% if page.layout == 'post' %}
+  {% assign words = page.content | number_of_words %}
 {% else %}
   {% assign words = post.content | number_of_words %}
-  {% if words < 360 %}
-  1 min read
-  {% else %}
-  {{ words | divided_by:150 }} mins read
-  {% endif %}
+{% endif %}
+
+{% if words < 360 %}
+1 min read
+{% else %}
+{{ words | divided_by:150 }} mins read
 {% endif %}

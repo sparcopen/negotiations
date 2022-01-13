@@ -12,7 +12,7 @@ collections:
         file: "about.md"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "About" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "about" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "default" }
           - { label: "About summary", name: "summary", widget: "text" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Campus Partnerships Planning"

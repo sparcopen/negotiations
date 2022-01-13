@@ -36,6 +36,9 @@
         </p>
         {% endif %}
       </header>
+      <hr/>
+      {{ data-analysis }}
+      <hr/>
 
       <aside class="col{% if page.full_page == true %} full-page__aside{% else %} col--1of3 page-header-aside{% endif %}">
         {% comment %}
@@ -45,18 +48,13 @@
         {% include citation.html class="accordion__content" id="citationContent"%}
         {% endcomment %}
 
-        <p class="font-sans">
-          <small>
-          {% assign words = page.content | number_of_words %}
-          {% if words < 360 %}
-            1 min read
-          {% else %}
-            {{ words | divided_by:150 }} mins read
-          {% endif %}
-          </small>
-          <small class="font-sans">From the
+        <p>
+          From the
           <a href="{{ site.BASE_PATH }}/{{ page.collection }}">{%- include wg_full_name.html -%}</a>
-          working group</small>
+          working group<br/>
+          <small>
+            {% include post-readtime.html %}
+          </small>
         </p>
 
         {% include tags.html %}

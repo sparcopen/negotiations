@@ -1,6 +1,6 @@
 ---
 title: About
-layout: about
+layout: default
 summary: >+
   The SPARC Journal Negotiation Community of Practice (CoP) is a community-led
   effort to assist libraries in the development of a more equitable journal

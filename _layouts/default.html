@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body class="row row--centered">
 
-    <main class="col col--1of2">
-      <div class="page-content">
-        <h1>{{ page.title }}</h1>
-        {{ page.content | markdownify }}
+  <body class="about">
+    <main class="row row--centered">
+      <div class="col col--1of2">
+        <header>
+          <a href="/" class="page-header__home screen-only">
+            {% include svg/bookmark-inverted.svg %}
+            <span class="sr-only">Return to homepage</span>
+          </a>
+          <h1>{{ page.title }}</h1>
+        </header>
 
+        <article class="page-content">
+          {{ page.content | markdownify }}
+        </article>
         {% include footer.html %}
       </div>
     </main>
     {% include analytics.html %}
   </body>
+
 </html>

@@ -32,6 +32,7 @@
       {% if page.cover_img %}
       </div>
       {% endif %}
+      
       <div class="row">
         <div class="col col--1of3">
           {% if page.content.size > 1 %}
@@ -62,6 +63,10 @@
             </a>
             {% endif %}
             <ul class="toc toc--with-feature col--group">
+              {% if page.featured_post %}
+                {% include featured-post.html %}
+              {% endif %}
+
               {% comment %}Display threads aggregating posts with the same tag / topic{% endcomment %}
               {% if page.thread_type == "topic" %}
                 {% for collection in site.collections %}
