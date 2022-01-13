@@ -5,9 +5,9 @@
   <body class="thread">
     <main>
       {% if page.cover_img %}
-      <div style="background-image: url('{{ page.cover_img }}'); background-size: cover; background-position: center; height: 100%;">
+      <div class="thread__cover" style="background-image: url('{{ page.cover_img }}');">
       {% endif %}
-        <header class="col page-header"{% if page.cover_img %} style="background-color: rgba(0, 0, 0, 0.45);"{% endif %}>
+        <header class="col page-header{% if page.cover_img %} thread__cover-bg{% endif %}">
           <a href="/" class="page-header__home screen-only">
             {% include svg/bookmark.svg %}
             <span class="sr-only">Return to homepage</span>
