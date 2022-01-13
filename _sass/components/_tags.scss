@@ -17,6 +17,11 @@
     line-height: 1;
     font-size: small;
     @include font-sans;
+
+    &:hover, &:focus, &:active {
+      background-color: $red;
+      color: $white;
+    }
   }
 
   &:last-of-type a {
