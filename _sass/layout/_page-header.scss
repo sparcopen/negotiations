@@ -1,12 +1,10 @@
 .page-header {
+  padding-bottom: $spacing-03;
+  margin-bottom: $spacing-04;
   z-index: 1;
   background: $black;
   color: $white;
   font-size: 18px;
-
-  h1 {
-    margin: 0 0 $spacing-04 0;
-  }
 
   a {
     color: $white;
@@ -40,8 +38,6 @@
 }
 
 .page-header-content {
-  margin-top: $spacing-04;
-
   @media (min-width: 1200px) {
     margin-left: 33.3333333%;
   }

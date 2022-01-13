@@ -1,5 +1,6 @@
 .infobox {
   padding: $spacing-04;
+  margin-bottom: $spacing-04;
   background-color: rgba($light-grey, 0.35);
   @include typescale-06;
 
@@ -9,6 +10,11 @@
 
   a {
     text-decoration: none;
+  }
+
+  .tag a {
+    background-color: rgba($grey, 0.25);
+    color: $grey;
   }
 
   ul:last-child,

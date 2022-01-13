@@ -3,82 +3,95 @@
   {% include head.html %}
 
   <body class="thread">
-    <main class="row">
-      <header class="col col--1of3 page-header page-header--fixed">
-        <a href="/" class="page-header__home screen-only">
-          {% include svg/bookmark.svg %}
-          <span class="sr-only">Return to homepage</span>
-        </a>
-        <p class="label">
-          {% if page.name == 'blog.md' %}
-          Recent Analysis
-          {% elsif page.thread_type == 'topic' %}
-          Topic
-          {% else %}
-          Working Group
-          {% endif %}
-        </p>
-        <h1>
-          {% if page.thread_type == 'topic' %}
-            All articles tagged with <em>{{ page.topic }}</em>
-          {% else %}
-            {{ page.title }}
-          {% endif %}
-        </h1>
-      </header>
-
-      <div class="col col--2of3 page-header-content">
-        <section class="page-content">
+    <main>
+      {% if page.cover_img %}
+      <div style="background-image: url('{{ page.cover_img }}'); background-size: cover; background-position: center; height: 100%;">
+      {% endif %}
+        <header class="col page-header"{% if page.cover_img %} style="background-color: rgba(0, 0, 0, 0.45);"{% endif %}>
+          <a href="/" class="page-header__home screen-only">
+            {% include svg/bookmark.svg %}
+            <span class="sr-only">Return to homepage</span>
+          </a>
+          <p class="label">
+            {% if page.name == 'blog.md' %}
+            Recent Analysis
+            {% elsif page.thread_type == 'topic' %}
+            Topic
+            {% else %}
+            Working Group
+            {% endif %}
+          </p>
+          <h1>
+            {% if page.thread_type == 'topic' %}
+              All articles tagged with <em>{{ page.topic }}</em>
+            {% else %}
+              {{ page.title }}
+            {% endif %}
+          </h1>
+        </header>
+      {% if page.cover_img %}
+      </div>
+      {% endif %}
+      <div class="row">
+        <div class="col col--1of3">
           {% if page.content.size > 1 %}
-          <div class="row">
-            <div class="col col--2of3 infobox">
+            <div class="infobox">
               {{ page.content | markdownify }}
             </div>
-            <div class="col col--1of3 no-padding">
-              <div style="background-image: url('{{ page.cover_img }}'); background-size: cover; background-position: center; height: 100%;"></div>
-            </div>
+          {% endif %}
+
+          {% if page.thread_type == 'topic' %}
+          <div class="infobox">
+            <h2 class="label">All tags</h2>
+            <ul class="tags">
+              {% for tag in site.topics %}
+                <li class="tag">
+                  <a href="{{ site.BASE_PATH }}{{ tag.url | remove: '.html' }}">{{ tag.topic }}</a>
+                </li>
+              {% endfor %}
+            </ul>
           </div>
           {% endif %}
-
-          <h2>Contents</h2>
-          {% if page.pdf %}
-          <a href="{{ page.pdf }}" class="button button--cta" download>
-            Download
-          </a>
-          {% endif %}
-
-          <ul class="toc toc--with-feature col--group">
-            {% comment %}Display threads aggregating posts with the same tag / topic{% endcomment %}
-            {% if page.thread_type == "topic" %}
-              {% for collection in site.collections %}
-                {% assign thread = collection.relative_directory | remove: "_" %}
-                {% if thread != 'authors' and thread != 'blog' and thread != 'posts' %}
-                  {% assign posts = site[thread] %}
-                  {% assign topic_thread = page.topic %}
-                  {% for post in posts %}
-                    {% if post.topics contains topic_thread %}
-                      {% include thread-toc.html %}
-                    {% endif %}
-                  {% endfor %}
-                {% endif %}
-              {% endfor %}
-
-            {% comment %}All other types of posts{% endcomment %}
-            {% else %}
-              {% assign thread = page.url | remove: "/" | remove: ".html" %}
-              {% assign posts = site[thread] | reverse %}
-              {% for post in posts %}
-                {% include thread-toc.html %}
-              {% endfor %}
+        </div>
+        <div class="col col--2of3">
+          <section class="page-content">
+            <h2 class="sr-only">Contents</h2>
+            {% if page.pdf %}
+            <a href="{{ page.pdf }}" class="button button--cta" download>
+              Download
+            </a>
             {% endif %}
-          </ul>
-        </section>
+            <ul class="toc toc--with-feature col--group">
+              {% comment %}Display threads aggregating posts with the same tag / topic{% endcomment %}
+              {% if page.thread_type == "topic" %}
+                {% for collection in site.collections %}
+                  {% assign thread = collection.relative_directory | remove: "_" %}
+                  {% if thread != 'authors' and thread != 'blog' and thread != 'posts' %}
+                    {% assign posts = site[thread] %}
+                    {% assign topic_thread = page.topic %}
+                    {% for post in posts %}
+                      {% if post.topics contains topic_thread %}
+                        {% include thread-toc.html %}
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
 
-        {% include footer.html %}
+              {% comment %}All other types of posts{% endcomment %}
+              {% else %}
+                {% assign thread = page.url | remove: "/" | remove: ".html" %}
+                {% assign posts = site[thread] | reverse %}
+                {% for post in posts %}
+                  {% include thread-toc.html %}
+                {% endfor %}
+              {% endif %}
+            </ul>
+          </section>
+        </div>
       </div>
-
     </main>
-  {% include analytics.html %}
+    {% include footer.html %}
+    {% include analytics.html %}
   </body>
 
 </html>

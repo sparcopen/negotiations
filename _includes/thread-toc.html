@@ -26,9 +26,18 @@
     {% endif %}
   </header>
   <div class="col col--group col--2of3">
-    {% if post.summary %}
-    <p><small>{{ post.summary }}</small></p>
-    {% endif %}
+    <p>
+      <small>
+      {% if post.summary %}
+        {{ post.summary }}
+      {% elsif post.full_page != true %}
+        {{ post.content | strip_html | truncate: 200 }}
+      {% else %}
+        <em>No summary for this article.</em>
+      {% endif %}
+      </small>
+    </p>
+
     <p class="metadata label">
       <small>
         {% if post.link %}
