@@ -47,10 +47,14 @@
     }
 
     article {
-      margin-bottom: $spacing-05;
+      padding-bottom: $spacing-04;
+      margin-bottom: $spacing-04;
+      border-bottom: 1px solid $grey;
 
       &:last-child {
+        padding-bottom: 0;
         margin-bottom: 0;
+        border: 0;
       }
     }
 
