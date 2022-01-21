@@ -7,7 +7,7 @@ topics:
 summary: Her writing and thinking captured momentous change in American life—and
   in her own.
 working_group:
-  - Campus Partnerships Planning
+  - Data Analysis
 authors:
   - Caitlin Carter
 full_page: false
