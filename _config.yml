@@ -27,11 +27,14 @@ plugins:
   - jekyll-sitemap
 
 collections:
+  working-groups:
+    relative_directory: _working-groups
+    output: true
   topics:
     relative_directory: _topics
     output: true
   articles:
-    relative_directory: _topics
+    relative_directory: _articles
     output: true
   authors:
     relative_directory: _authors

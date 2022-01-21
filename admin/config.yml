@@ -87,7 +87,7 @@ collections:
       - { label: "Topic", name: "topic", widget: "string" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "thread"}
       - { label: "Thread type", name: "thread_type", widget: "hidden", default: "topic"}
-  - name: "working_groups"
+  - name: "working-groups"
     label: "Working Groups"
     label_singular: "Working Group"
     identifier_field: "working_group"
