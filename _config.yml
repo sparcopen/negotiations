@@ -1,6 +1,6 @@
 # visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
-title: "SPARC: Community Owned Infrastructure"
+title: "SPARC: Journal Negotiation Community of Practice"
 sass:
     style: compressed
 exclude: ["README.md"] # files to exclude
@@ -11,12 +11,12 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: "SPARC: Community Owned Infrastructure"
+      title: "SPARC: Journal Negotiation Community of Practice"
 
 description: "Data and data analytics are spreading fast at higher education institutions, and the academic community is at a critical juncture."
 author:
   name: Scholarly Publishing and Academic Resources Coalition
-  email: Joe@sparcopen.org
+  email: nick@sparcopen.org
   github: sparcopen
   twitter: sparc_na
   facebook: sparcopen
