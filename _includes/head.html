@@ -1,6 +1,13 @@
 <head>
   <meta charset="utf-8">
-  <title>{% if page.name != "index.html" %}{{ page.title }} – {% endif %}{{ site.title }}</title>
+  {% if page.thread_type == 'working_group' %}
+    {% assign page_title = page.working_group %}
+  {% elsif page.thread_type == 'topic' %}
+    {% assign page_title = page.topic | prepend:'Articles tagged ‘' | append:'’' %}
+  {% else %}
+    {% assign page_title = page.title %}
+  {% endif %}
+  <title>{% if page.name != "index.html" %}{{ page_title }} – {% endif %}{{ site.title }}</title>
   <meta name="author" content="{{ site.author.name }}">
   {% if page.description %}
 	<meta name="description" content="{{ page.description }}">
