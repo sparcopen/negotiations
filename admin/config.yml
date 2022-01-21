@@ -25,7 +25,7 @@ collections:
           - { label: "About summary", name: "summary", widget: "text", required: false }
       - label: "Campus Partnerships Planning"
         name: "campus-partnerships-planning"
-        file: "campus-partnerships-planning.md"
+        file: "campus-partnerships-planning/index.md"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Campus Partnerships Planning" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "thread" }
@@ -87,6 +87,57 @@ collections:
       - { label: "Topic", name: "topic", widget: "string" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "thread"}
       - { label: "Thread type", name: "thread_type", widget: "hidden", default: "topic"}
+  - name: "working_group"
+    label: "Working Groups"
+    label_singular: "Working Group"
+    identifier_field: "working_group"
+    folder: "_working-groups/"
+    slug: "{{slug}}"
+    widget: "list"
+    allow_add: true
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Working Group name", name: "working_group", widget: "string" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "thread"}
+      - { label: "Thread type", name: "thread_type", widget: "hidden", default: "working_group"}
+  - name: "article"
+    label: "Articles"
+    label_singular: "Article"
+    folder: "_articles/"
+    slug: "{{slug}}"
+    widget: "list"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Publishing Date", name: "date", widget: "datetime" }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Topic(s)",
+          name: "topics",
+          widget: "relation",
+          collection: "topics",
+          multiple: true,
+          display_fields: [topic],
+          search_fields: [topic],
+          value_field: "topic",
+          required: false
+        }
+      - { label: "Article summary", name: "summary", widget: "text", required: false }
+      - {
+          label: "Author(s)",
+          name: "authors",
+          widget: "relation",
+          collection: "authors",
+          multiple: true,
+          display_fields: [display_name],
+          search_fields: [display_name],
+          value_field: "display_name",
+          required: false
+        }
+      - { label: "Full-page content?", name: "full_page", widget: "boolean", default: false, required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "campus-partnerships-planning"
     label: "Campus Partnerships Planning"
     label_singular: "CPPWG post"
