@@ -72,7 +72,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "thread"}
       - { label: "Thread type", name: "thread_type", widget: "hidden", default: "working_group"}
-  - name: "article"
+  - name: "articles"
     label: "Articles"
     label_singular: "Article"
     folder: "_articles/"
