@@ -4,6 +4,8 @@ date: 2021-12-16T14:44:29.788Z
 title: Aenean ut mi placerat, vehicula augue vel, fermentum est
 summary: Aenean ut mi placerat, vehicula augue vel, fermentum est. Nulla
   accumsan venenatis est id imperdiet. Morbi in velit nec urna lobortis egestas.
+working_group:
+  - Journal Cancellation Impact
 ---
 Aenean ut mi placerat, vehicula augue vel, fermentum est. Nulla accumsan venenatis est id imperdiet. Morbi in velit nec urna lobortis egestas. Etiam eu pharetra lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce dapibus justo at felis aliquet, eu tempor ligula euismod. Vestibulum quis turpis in nisl pharetra dignissim. Nullam tempus venenatis odio, id imperdiet erat varius ut. Suspendisse nec lectus urna. **Vivamus ante libero, lacinia vitae quam sit amet, pulvinar aliquet libero. Aliquam vitae vestibulum erat.**
 

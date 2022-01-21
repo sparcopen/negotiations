@@ -6,6 +6,8 @@ topics:
   - A good tag
 summary: Permafrost contains microbes, mammoths, and twice as much carbon as
   Earth’s atmosphere. What happens when it starts to melt?
+working_group:
+  - Data Analysis
 authors:
   - Caitlin Carter
   - Nick Shockey
