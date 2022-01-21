@@ -87,7 +87,7 @@ collections:
       - { label: "Topic", name: "topic", widget: "string" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "thread"}
       - { label: "Thread type", name: "thread_type", widget: "hidden", default: "topic"}
-  - name: "working_group"
+  - name: "working_groups"
     label: "Working Groups"
     label_singular: "Working Group"
     identifier_field: "working_group"
@@ -125,6 +125,17 @@ collections:
           required: false
         }
       - { label: "Article summary", name: "summary", widget: "text", required: false }
+      - {
+          label: "Working group(s)",
+          name: "working_group",
+          widget: "relation",
+          collection: "working_groups",
+          multiple: true,
+          display_fields: [working_group],
+          search_fields: [working_group],
+          value_field: "working_group",
+          required: false
+        }
       - {
           label: "Author(s)",
           name: "authors",
