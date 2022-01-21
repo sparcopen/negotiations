@@ -2,82 +2,83 @@
 <html lang="en">
 {% include head.html %}
   <body class="homepage">
-
-    <header class="homepage__header">
-      <div class="row">
-        <div class="col col--1of2">
-          <a href="https://www.sparcopen.org" target="_blank" rel="noopener" title="SPARC’s website" class="homepage__logo">
-            {% include svg/logo.svg %}
-          </a>
-          <h1>Journal Negotiation <br/>Community of Practice</h1>
+    <main>
+      <!-- Header/About -->
+      <header class="homepage__header">
+        <div class="row">
+          <div class="col col--1of2">
+            <a href="https://www.sparcopen.org" target="_blank" rel="noopener" title="SPARC’s website" class="homepage__logo">
+              {% include svg/logo.svg %}
+            </a>
+            <h1>Journal Negotiation <br/>Community of Practice</h1>
+          </div>
+          <div class="col col--1of2">
+            <h2 class="sr-only">About</h2>
+            <p class="font-serif">{{ page.about_text }}</p>
+            <a href="{{ site.BASE_PATH }}/about" class="button">More about us</a>
+          </div>
         </div>
-        <div class="col col--1of2">
-          <h2 class="sr-only">About</h2>
-          <p class="font-serif">{{ page.about_text }}</p>
-          <a href="{{ site.BASE_PATH }}/about" class="button">More about us</a>
-        </div>
-      </div>
-    </header>
+      </header>
 
+      <!-- Working Groups -->
       <section class="row">
         <header class="col homepage__header--line">
           <h2 class="label">By working group</h2>
         </header>
 
-        {% for item in site.data.nav.items %}
-          {% if item.working_group %}
-            <article class="row homepage__group">
-              <header class="col col--group col--2of3 row">
-                <div class="col col--group col--1of2">
-                  <div class="homepage__group-bg" style="background-image: url('../media/wg/{{ item.cover_img }}')"></div>
-                </div>
-                <a href="{{ site.BASE_PATH }}/{{ item.name }}" class="col col--group col--1of2 homepage__group-label">
-                  <h3>{{ item.label }}</h3>
-                </a>
-              </header>
-              <div class="col col--group col--1of3">
-                {% if site[item.name].size > 0 %}
-                  {% assign posts = site[item.name] | reverse %}
-                  {% for post in posts limit:1 %}
-                  <a href="{{ site.BASE_PATH }}/{{ item.name }}/{{ post.slug }}" class="homepage__group-latest">
-                    <p class="label">
-                      <small>
-                        Latest published on
-                        <time datetime="{{ post.date | date: '%F' }}">
-                          {{ post.date | date: "%b %e, %Y" }}
-                        </time>
-                      </small>
-                    </p>
-                    <h4>{{ post.title }}</h4>
-                    {% if post.authors or post.author %}
-                    <p>
-                      <small>
-                      <em class="font-serif">By</em>
-                      {% if post.authors %}
-                        {% for author in post.authors %}
-                          {% if forloop.last %}
-                            {{ author }}
-                          {% else %}
-                            {{ author }},
-                          {% endif %}
-                        {% endfor %}
-                      {% elsif post.author %}
-                        {{ post.author }}
+        {% for group in site.working-groups %}
+        {% assign current_wg = group.working_group %}
+        <article class="row homepage__group">
+          <header class="col col--group col--2of3 row">
+            <div class="col col--group col--1of2">
+              <div class="homepage__group-bg" style="background-image: url('../media/wg/{{ group.cover_img }}')"></div>
+            </div>
+            <a href="{{ site.BASE_PATH }}/{{ current_wg | slugify }}" class="col col--group col--1of2 homepage__group-label">
+              <h3>{{ current_wg }}</h3>
+            </a>
+          </header>
+          <div class="col col--group col--1of3">
+            {% assign all_articles = site.articles | reverse %}
+            {% for article in all_articles %}
+              {% if article.working_group contains current_wg %}
+              <a href="{{ site.BASE_PATH }}/articles/{{ article.slug }}" class="homepage__group-latest">
+                <p class="label">
+                  <small>
+                    Latest published on
+                    <time datetime="{{ article.date | date: '%F' }}">
+                      {{ article.date | date: "%b %e, %Y" }}
+                    </time>
+                  </small>
+                </p>
+                <h4>{{ article.title }}</h4>
+                {% if article.authors or article.author %}
+                <p>
+                  <small>
+                  <em class="font-serif">By</em>
+                  {% if article.authors %}
+                    {% for author in article.authors %}
+                      {% if forloop.last %}
+                        {{ author }}
+                      {% else %}
+                        {{ author }},
                       {% endif %}
-                      </small>
-                    </p>
-                    {% endif %}
-                  </a>
-                  {% endfor %}
-                {% else %}
-                  <p class="font-serif">No articles published yet.</p>
+                    {% endfor %}
+                  {% elsif article.author %}
+                    {{ article.author }}
+                  {% endif %}
+                  </small>
+                </p>
                 {% endif %}
-              </div>
-            </article>
-          {% endif %}
+              </a>
+              {% break %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </article>
         {% endfor %}
       </section>
 
+      <!-- Topics/Tags-->
       <section class="row row--centered">
         <header class="col homepage__header--line">
           <h2 class="label">By topic</h2>
@@ -91,6 +92,7 @@
         </ul>
       </section>
 
+      <!-- Recent Analysis -->
       {% if site.blog %}
       {% assign posts = site.blog | reverse %}
       <section class="row">
