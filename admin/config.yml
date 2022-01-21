@@ -97,9 +97,9 @@ collections:
       - { label: "Article summary", name: "summary", widget: "text", required: false }
       - {
           label: "Working group(s)",
-          name: "working_group",
+          name: "working-groups",
           widget: "relation",
-          collection: "working_groups",
+          collection: "working-groups",
           multiple: true,
           display_fields: [working_group],
           search_fields: [working_group],
