@@ -33,7 +33,7 @@
             <div class="col col--group col--1of2">
               <div class="homepage__group-bg" style="background-image: url('..{{ group.cover_img }}')"></div>
             </div>
-            <a href="{{ site.BASE_PATH }}/{{ current_wg | slugify }}" class="col col--group col--1of2 homepage__group-label">
+            <a href="{{ site.BASE_PATH }}/working-groups/{{ current_wg | slugify }}" class="col col--group col--1of2 homepage__group-label">
               <h3>{{ current_wg }}</h3>
             </a>
           </header>
@@ -119,20 +119,7 @@
       {% endif %}
     </main>
 
-    <footer class="row">
-      <div class="col col--1of2">
-        <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener" style="display: inline-block;">
-          {% include svg/cc.svg %}
-          {% include svg/by.svg %}
-        </a>
-        {% include svg/github.svg %}
-      </div>
-      <div class="col col--1of2" style="text-align: right;">
-        <a href="https://www.sparcopen.org" target="_blank" rel="noopener" title="SPARC’s website" style="display: block;">
-          {% include svg/logo.svg %}
-        </a>
-      </div>
-    </footer>
+    {% include footer.html %}
     {% include analytics.html %}
 
     <script>
