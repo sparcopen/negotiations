@@ -90,11 +90,11 @@
               {% elsif page.thread_type == "working_group" %}
                 {% for collection in site.collections %}
                   {% assign thread = collection.relative_directory | remove: "_" %}
-                  {% if thread != 'authors' and thread != 'blog' and thread != 'posts' %}
-                    {% assign posts = site[thread] %}
-                    {% assign working_group_thread = page.working_group %}
+                  {% if thread == 'working-groups' %}
+                    {% assign posts = site.articles %}
+                    {% assign wg_thread = page.working_group %}
                     {% for post in posts %}
-                      {% if post.working_group contains working_group_thread %}
+                      {% if post.working-groups contains wg_thread %}
                         {% include thread-toc.html %}
                       {% endif %}
                     {% endfor %}

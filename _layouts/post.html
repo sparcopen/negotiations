@@ -46,14 +46,18 @@
           {% include citation.html class="accordion__content" id="citationContent"%}
           {% endcomment %}
 
+          {% if page.working-groups %}
           <p>
             From the
-            <a href="{{ site.BASE_PATH }}/{{ page.collection }}">{%- include wg_full_name.html -%}</a>
-            working group<br/>
+            {% for group in page.working-groups %}
+            <a href="{{ site.BASE_PATH }}/working-groups/{{ group | slugify }}">{{ group }}{% if forloop.last != true %},{% endif %}</a>
+            {% endfor %}
+            working group{% if page.working-groups.size > 0 %}s{% endif %}<br/>
             <small>
               {% include post-readtime.html %}
             </small>
           </p>
+          {% endif %}
 
           {% include tags.html %}
 

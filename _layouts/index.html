@@ -40,7 +40,7 @@
           <div class="col col--group col--1of3">
             {% assign all_articles = site.articles | reverse %}
             {% for article in all_articles %}
-              {% if article.working_group contains current_wg %}
+              {% if article.working-groups contains current_wg %}
               <a href="{{ site.BASE_PATH }}/articles/{{ article.slug }}" class="homepage__group-latest">
                 <p class="label">
                   <small>
@@ -70,7 +70,6 @@
                 </p>
                 {% endif %}
               </a>
-              {% break %}
               {% endif %}
             {% endfor %}
           </div>
