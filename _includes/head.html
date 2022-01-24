@@ -9,10 +9,12 @@
   {% endif %}
   <title>{% if page.name != "index.html" %}{{ page_title }} – {% endif %}{{ site.title }}</title>
   <meta name="author" content="{{ site.author.name }}">
-  {% if page.description %}
-	<meta name="description" content="{{ page.description }}">
-  {% else %}
+  {% if page.url == '/' %}
   <meta name="description" content="{{ site.description }}">
+  {% elsif page.summary %}
+  <meta name="description" content="{{ page.summary }}">
+  {% elsif page.content %}
+  <meta name="description" content="{{ page.content | strip_html | truncatewords:20, '…' }}">
 	{% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <meta name="theme-color" content="#1F2222">
