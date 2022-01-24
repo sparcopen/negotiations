@@ -8,6 +8,7 @@ working-groups:
   - Data Analysis
 authors:
   - Matthew Goddard
+  - Sian Brannon
 full_page: false
 ---
 The basic idea behind full-text coverage ratios (FTCRs) is that the ratio between held items and total items indexed in a discovery service is an interesting and actionable number that can shed light on the relative strength of holdings in particular subject areas. This number can be calculated from the total number of items returned by two discovery-layer searches that are identical in every way but one: one is limited to full-text items, the other is not limited; i.e., the other is “expanded.”The questions that FTCRs can help answer depend on your confidence in the comprehensiveness of your discovery layer’s search index. If confidence is high, you would be able to say, “We’re able to provide roughly X% of what has been published in this area.” If confidence is low, you would still be able to say, “We’re able to provide roughly X% of what we have indexed in this area.”
