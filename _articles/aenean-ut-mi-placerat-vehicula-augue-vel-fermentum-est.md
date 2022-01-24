@@ -10,6 +10,8 @@ Aenean ut mi placerat, vehicula augue vel, fermentum est. Nulla accumsan venenat
 
 ***Suspendisse at ex at eros maximus hendrerit. Curabitur gravida lacinia interdum. Ut ut felis sit amet sapien viverra cursus posuere eget enim. Proin congue, nisi eu porttitor maximus, dui mi pulvinar mauris, at fringilla augue ipsum et elit.*** Vestibulum vehicula sit amet tortor quis eleifend. Curabitur sagittis massa ac augue dapibus efficitur. Cras vitae lacinia quam. Curabitur placerat iaculis ex at mattis. Integer libero eros, malesuada vitae egestas quis, blandit facilisis nulla.
 
+![A view of a lake through some ferns and trees.](/media/uploads/0-placeholder.jpg)
+
 # Aliquam sed quam sit amet urna luctus consequat sit amet sit amet tortor.
 
 Sed fringilla sem vel nibh accumsan, vel accumsan ipsum tempus. In hac habitasse platea dictumst. Suspendisse potenti. Phasellus condimentum, metus semper eleifend convallis, nulla dui eleifend purus, vel interdum neque elit nec arcu. Quisque interdum dui non quam volutpat volutpat. Nullam sit amet molestie ante. Nam orci lacus, aliquet non varius dictum, facilisis et ante. [Nullam et erat non odio tincidunt tincidunt at eget leo. ](https://oa.works)Proin gravida erat ac odio ultrices, in viverra ex placerat. Morbi ultrices, ex ut rutrum laoreet, tellus massa mattis dui, id viverra eros nunc sit amet ipsum. Vivamus viverra laoreet eros, in laoreet elit dapibus non.
