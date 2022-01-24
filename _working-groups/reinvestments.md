@@ -1,6 +1,6 @@
 ---
 working_group: Reinvestments
-cover_img: /media/uploads/reinvestments.jpg
+cover_img: /media/uploads/reinvestment-image.jpg
 layout: thread
 thread_type: working_group
 ---
