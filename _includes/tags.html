@@ -7,7 +7,7 @@
     {% for tag in site.topics %}
       {% if tag.slug == tag_slug %}
       <li class="tag">
-        <a href="{{ site.BASE_PATH }}{{ tag.url | remove: '.html' }}">{{ tag.topic }}</a>
+        <a href="{{ site.BASE_PATH }}{{ tag.url }}">{{ tag.topic }}</a>
       </li>
       {% endif %}
     {% endfor %}
@@ -23,7 +23,7 @@
     {% for tag in site.topics %}
       {% if tag.slug == tag_slug %}
       <li class="tag">
-        <a href="{{ site.BASE_PATH }}{{ tag.url | remove: '.html' }}">{{ tag.topic }}</a>
+        <a href="{{ site.BASE_PATH }}{{ tag.url }}">{{ tag.topic }}</a>
       </li>
       {% endif %}
     {% endfor %}

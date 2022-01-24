@@ -23,6 +23,7 @@ author:
 
 BASE_PATH: https://negotiations.sparcopen.org
 url: https://negotiations.sparcopen.org # keep this for sitemap
+permalink: pretty
 plugins:
   - jekyll-sitemap
 

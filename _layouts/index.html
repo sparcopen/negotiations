@@ -33,7 +33,7 @@
             <div class="col col--group col--1of2">
               <div class="homepage__group-bg" style="background-image: url('..{{ group.cover_img }}')"></div>
             </div>
-            <a href="{{ site.BASE_PATH }}/working-groups/{{ current_wg | slugify }}" class="col col--group col--1of2 homepage__group-label">
+            <a href="{{ site.BASE_PATH }}{{ group.url }}" class="col col--group col--1of2 homepage__group-label">
               <h3>{{ current_wg }}</h3>
             </a>
           </header>
