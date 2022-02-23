@@ -7,6 +7,10 @@ summary: Introduces the work of the Data Analysis Working Group as part of the
   Journal Negotiation Community of Practice.
 working-groups:
   - Data Analysis
+authors:
+  - Katharine V. Macy
+  - Sian Brannon
+  - Robert Heaton
 full_page: false
 ---
 Librarians’ responsibility to steward collections requires continuous assessment of materials budgets, especially when most library budgets are flat or decreasing. A significant portion of materials expense is derived from the recurring costs associated with access to subscription journals and databases. Subscription price increases have greatly outpaced library budgets. To remain sustainable, libraries need to reevaluate their collection practices, and that requires gathering and interpreting data. Careful data analysis is critical in making decisions that best serve stakeholders, as well as in planning negotiations with collection materials vendors.  
