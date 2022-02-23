@@ -8,6 +8,9 @@ summary: The Campus Planning and Partnerships Working Group of the SPARC
   conversations.
 working-groups:
   - Campus Partnerships Planning
+authors:
+  - Scarlet Galvan
+  - Anne Houston
 full_page: false
 ---
 Developing strategies around issues such as cancellation, licensing negotiations, and involving stakeholders effectively in library collections decisions are complex for every academic library. These discussions run in parallel to advancing agendas around scholarly communications, library publishing initiatives, user privacy, and open as an underlying strategy. Colleges and universities stand to gain enormous ground through creating strong negotiation, planning, and communication programs that center the library as domain experts and advocates. 
