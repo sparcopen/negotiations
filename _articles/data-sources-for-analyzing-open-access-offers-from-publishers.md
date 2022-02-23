@@ -13,6 +13,7 @@ authors:
   - Carrie Nelson
   - Mathew Willmott
   - Jason Price
+  - Eric Schares
 full_page: false
 ---
 # Introduction
