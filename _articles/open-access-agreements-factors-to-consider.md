@@ -10,6 +10,9 @@ working-groups:
 authors:
   - Allison Langham-Putrow
   - Yuan Li
+  - Carrie Nelson
+  - Mathew Willmott
+  - Jason Price
 full_page: false
 ---
 
