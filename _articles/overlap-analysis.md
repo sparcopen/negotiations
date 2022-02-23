@@ -10,6 +10,8 @@ summary: Overlap analyses can help clarify the uniqueness of, and similarities
   resource or collection
 working-groups:
   - Data Analysis
+authors:
+  - Evelyn Bruneau
 full_page: false
 ---
 # Overview
