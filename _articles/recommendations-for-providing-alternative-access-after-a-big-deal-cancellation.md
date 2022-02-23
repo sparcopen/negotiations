@@ -7,6 +7,10 @@ summary: This resource explores the provision of alternative means of access as
   deals in negotiations with publishers.
 working-groups:
   - Journal Cancellation Impact
+authors:
+  - Brandy Karl
+  - Khaleedah Thomas
+  - Ana Noriega
 full_page: false
 ---
 As Big Deals start to disappear, the desire that motivated them—easy and instant access to massive amounts of content—doesn’t. In response to cutting subscription access, many institutions put in place ‘alternative access' strategies to provide pathways to accessing content that was previously available via subscription.
