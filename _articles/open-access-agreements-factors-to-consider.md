@@ -7,7 +7,9 @@ summary: This document provides an overview of questions and factors to consider
   Data Sources for Analyzing Open Access Offers from Publishers.
 working-groups:
   - Data Analysis
-authors: []
+authors:
+  - Allison Langham-Putrow
+  - Yuan Li
 full_page: false
 ---
 
