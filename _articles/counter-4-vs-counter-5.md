@@ -7,6 +7,8 @@ summary: This document offers a brief overview of the changes between reports
   support year-over-year analysis of their usage statistics.
 working-groups:
   - Data Analysis
+authors:
+  - Hana Levay
 full_page: false
 ---
 # Introduction
