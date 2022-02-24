@@ -9,6 +9,7 @@ summary: Turnaways can be a useful metric to assess the impact of cancellation
 working-groups:
   - Data Analysis
 authors:
+  - Nga Ong
   - Sian Brannon
 full_page: false
 ---
