@@ -7,6 +7,9 @@ summary: This document provides a high-level overview of why libraries collect
   collect, and ways they collect them.
 working-groups:
   - Data Analysis
+authors:
+  - Jian Wang
+  - Hannah McKelvey
 full_page: false
 ---
 # Usage statistics in libraries
