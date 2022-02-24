@@ -10,6 +10,8 @@ summary: Data visualizations can assist in telling the story about your
   pitching.
 working-groups:
   - Data Analysis
+authors:
+  - Michele Gibney
 full_page: false
 ---
 The purpose of this document is to meet the charge of the SPARC Data Analysis Working Group (DAWG), and provide a high-level overview of how libraries can create data visualizations of usage statistics and use them to make collection development decisions as well as showcase the impact and value of the library to the university community. Below are examples from institutions of higher education and adjacent organizations who have published or presented on use of data visualizations in collection-development planning.
