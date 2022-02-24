@@ -7,6 +7,9 @@ summary: Cost-per-use data can be used to assess the value of online
   including some limitations in applying CPU data.
 working-groups:
   - Data Analysis
+authors:
+  - John P. Blosser
+  - Rachel Erb
 full_page: false
 ---
 Cost per use (CPU) analysis is a method to measure the investment value of a collection’s online resources by calculating the per unit price of a resource divided by the number of times the resource was used.
