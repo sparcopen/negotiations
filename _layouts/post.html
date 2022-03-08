@@ -39,13 +39,6 @@
 
       <aside class="col{% if page.full_page == true %} full-page__aside{% else %} col--1of3{% endif %}">
         {% if page.full_page != true %}<div class="sticky-sidebar">{% endif %}
-          {% comment %}
-          <p class="button-group">
-            <a href="#citationContent" class="button accordion-toggle">Cite</a>
-          </p>
-          {% include citation.html class="accordion__content" id="citationContent"%}
-          {% endcomment %}
-
           {% if page.working-groups %}
           <p>
             From the
@@ -61,10 +54,14 @@
 
           {% include tags.html %}
 
-          <p class="desktop-only">
-            <button id="printButton" class="button button--cta" onClick="window.print()">Print</button>
+          <p class="button-group desktop-only">
+            <a href="#citationContent" class="button accordion-toggle">Cite</a>
+            <button id="printButton" class="button" onClick="window.print()">Print</button>
             <a href="#top" alt="Back to top" title="Back to top" class="button">↑</a>
           </p>
+          <small>
+            {% include citation.html class="accordion__content" id="citationContent"%}
+          </small>
         {% if page.full_page != true %}</div>{% endif %}
       </aside>
 
