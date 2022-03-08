@@ -38,9 +38,10 @@
             </a>
           </header>
           <div class="col col--group col--1of3">
+            {% assign wg_thread = group.working_group %}
             {% assign all_articles = site.articles | reverse %}
-            {% for article in all_articles limit:1 %}
-              {% if article.working-groups contains current_wg %}
+            {% for article in all_articles %}
+              {% if article.working-groups contains wg_thread %}
               <a href="{{ site.BASE_PATH }}/articles/{{ article.slug }}" class="homepage__group-latest">
                 <p class="label">
                   <small>
@@ -69,9 +70,7 @@
                   </small>
                 </p>
                 {% endif %}
-              </a>
-              {% else %}
-              <p class="font-serif">No articles published yet.</p>
+              </a>{% break %}
               {% endif %}
             {% endfor %}
           </div>
