@@ -21,7 +21,7 @@ author:
   twitter: sparc_na
   facebook: sparcopen
 
-BASE_PATH: https://negotiations.sparcopen.org
+BASE_PATH: https://dev.negotiations.sparcopen.org
 url: https://negotiations.sparcopen.org # keep this for sitemap
 permalink: pretty
 plugins:
